@@ -1,0 +1,48 @@
+---
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const year = new Date().getFullYear();
+const externalLinks = [
+  { href: 'https://americanmigrainefoundation.org/', label: 'American Migraine Foundation' },
+  { href: 'https://headaches.org/', label: 'National Headache Foundation' },
+  { href: 'https://www.arthritis.org/', label: 'Arthritis Foundation' },
+  { href: 'https://ods.od.nih.gov/', label: 'NIH Office of Dietary Supplements' },
+];
+---
+
+<footer class="border-t border-cream-100 bg-cream-100/40 mt-24">
+  <div class="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-3 text-sm">
+    <div>
+      <p class="font-serif text-lg text-navy-900">InflammaFree</p>
+      <p class="mt-2 text-slate-500">A research-backed reference for anti-inflammatory foods. Personal use; not medical advice.</p>
+    </div>
+
+    <div>
+      <p class="font-medium text-navy-900">Site</p>
+      <ul class="mt-2 space-y-1 text-slate-500">
+        <li><a href={`${base}/foods`} class="hover:text-sage-800">Foods</a></li>
+        <li><a href={`${base}/conditions/migraine`} class="hover:text-sage-800">Conditions</a></li>
+        <li><a href={`${base}/meal-plan`} class="hover:text-sage-800">Meal Plan</a></li>
+        <li><a href={`${base}/science`} class="hover:text-sage-800">Science</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="font-medium text-navy-900">External resources</p>
+      <ul class="mt-2 space-y-1 text-slate-500">
+        {externalLinks.map((link) => (
+          <li><a href={link.href} class="hover:text-sage-800" target="_blank" rel="noopener noreferrer">{link.label}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-cream-100">
+    <div class="mx-auto max-w-6xl px-6 py-4 flex flex-col md:flex-row justify-between gap-2 text-xs text-slate-500">
+      <p>Educational content only. Consult your healthcare provider before changing your diet, especially with existing conditions or medications.</p>
+      <p>
+        © {year} ·
+        <a href="https://github.com/bcarvalho3012/inflammafree" target="_blank" rel="noopener noreferrer" class="hover:text-sage-800">Source on GitHub</a>
+      </p>
+    </div>
+  </div>
+</footer>
