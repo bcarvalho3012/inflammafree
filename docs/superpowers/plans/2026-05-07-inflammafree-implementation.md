@@ -6,7 +6,9 @@
 
 **Architecture:** Astro statically pre-renders every page (homepage, foods list, per-food pages, per-condition pages, meal-plan, science, 404). The only client-hydrated React island is the food database filter on `/foods`. Foods live in a single `foods.json`; conditions and prose pages live in Astro content collections. Validation via Zod and content collection schemas — typos fail the build.
 
-**Tech Stack:** Astro 4.x, React 18, Tailwind CSS, TypeScript (strict), Zod, Vitest, GitHub Actions, GitHub Pages.
+**Tech Stack:** Astro 6.x, React 18, Tailwind CSS v4 (via `@tailwindcss/vite`), TypeScript (strict), Zod, Vitest, GitHub Actions, GitHub Pages.
+
+> **Tailwind v4 note.** This plan uses Tailwind v4 (current stable in 2026), which has no `tailwind.config.js`. Theme tokens, plugins, and base styles all live in `src/styles/global.css` via `@theme`, `@plugin`, and `@layer base` directives. The integration is `@tailwindcss/vite` (a Vite plugin), not the deprecated `@astrojs/tailwind` integration.
 
 **Spec:** `docs/superpowers/specs/2026-05-07-inflammafree-design.md` (read this before starting).
 
@@ -31,7 +33,6 @@ GitHub auth must already work for `git push` (proven by the initial spec commit)
 ```
 inflammafree/
 ├── astro.config.mjs
-├── tailwind.config.mjs
 ├── tsconfig.json
 ├── package.json
 ├── vitest.config.ts
@@ -141,10 +142,10 @@ Goal: a deployable Astro project with React, Tailwind, theme tokens, fonts, GH A
 
 ```bash
 cd inflammafree
-npm create astro@latest -- --template minimal --typescript strict --install --no-git --skip-houston --yes .
+npm create astro@latest -- --template minimal --install --no-git --skip-houston --yes .
 ```
 
-Expected: a fresh Astro minimal template scaffolded into the current directory (`.`), with deps installed. The existing `docs/` directory and `.git/` are preserved.
+Expected: a fresh Astro minimal template scaffolded into the current directory (`.`), with deps installed. The existing `docs/` directory and `.git/` are preserved. The minimal template's `tsconfig.json` extends `astro/tsconfigs/strict` by default — no separate `--typescript strict` flag is needed (and it's not a recognized flag in current `create-astro` versions).
 
 - [ ] **Step 2: Verify the dev server runs**
 
@@ -158,29 +159,36 @@ git add -A
 git commit -m "chore: scaffold astro project (minimal template, strict ts)"
 ```
 
-### Task 1.2: Add React and Tailwind integrations
+### Task 1.2: Add React and Tailwind v4 integrations
 
 **Files:**
 - Modify: `package.json` (deps), `astro.config.mjs`
 
-- [ ] **Step 1: Add the integrations via Astro's CLI**
+- [ ] **Step 1: Add the React integration via Astro's CLI**
 
 ```bash
-npx astro add react tailwind --yes
+npx astro add react --yes
 ```
 
-Expected: `@astrojs/react`, `@astrojs/tailwind`, `react`, `react-dom`, `tailwindcss` added; `astro.config.mjs` updated to include both integrations; `tailwind.config.mjs` created.
+Expected: `@astrojs/react`, `react`, `react-dom`, `@types/react`, `@types/react-dom` installed; `astro.config.mjs` updated to include the React integration.
 
-- [ ] **Step 2: Verify dev server still runs**
+- [ ] **Step 2: Install Tailwind v4 manually (the Vite plugin approach)**
 
-Run: `npm run dev`
-Expected: dev server starts cleanly, no errors. Stop with Ctrl+C.
+```bash
+npm install tailwindcss @tailwindcss/vite
+```
 
-- [ ] **Step 3: Commit**
+Expected: `tailwindcss@^4` and `@tailwindcss/vite@^4` added to dependencies. **Do NOT run `npx astro add tailwind`** — that may install the deprecated `@astrojs/tailwind` integration on some versions, which we don't want.
+
+- [ ] **Step 3: Verify dev server still runs**
+
+Start `npm run dev` in the background, curl `http://localhost:4321/` to confirm it returns HTML, then stop the background process.
+
+- [ ] **Step 4: Commit**
 
 ```bash
 git add -A
-git commit -m "chore: add react and tailwind integrations"
+git commit -m "chore: add react integration and tailwind v4 deps"
 ```
 
 ### Task 1.3: Configure Astro for GitHub Pages
@@ -188,7 +196,7 @@ git commit -m "chore: add react and tailwind integrations"
 **Files:**
 - Modify: `astro.config.mjs`
 
-- [ ] **Step 1: Set `site` and `base` for GH Pages**
+- [ ] **Step 1: Set `site` and `base` for GH Pages and wire up the Tailwind v4 Vite plugin**
 
 Replace `astro.config.mjs` contents with:
 
@@ -196,21 +204,21 @@ Replace `astro.config.mjs` contents with:
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://bcarvalho3012.github.io',
   base: '/inflammafree',
   trailingSlash: 'ignore',
-  integrations: [
-    react(),
-    tailwind({ applyBaseStyles: false }),
-  ],
+  integrations: [react()],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   output: 'static',
 });
 ```
 
-`applyBaseStyles: false` is set because we'll author our own `global.css` with custom font imports + Tailwind directives.
+Tailwind v4 runs as a Vite plugin (not an Astro integration). Theme tokens are defined in CSS (Task 1.5), not in a JS config file.
 
 - [ ] **Step 2: Verify dev server runs at the configured base path**
 
@@ -224,66 +232,29 @@ git add astro.config.mjs
 git commit -m "chore: configure astro site and base for github pages"
 ```
 
-### Task 1.4: Set up custom Tailwind theme tokens
+### Task 1.4: (No-op for Tailwind v4 — theme tokens go in CSS)
 
-**Files:**
-- Modify: `tailwind.config.mjs`
+In Tailwind v4 there is no `tailwind.config.js`. Theme tokens, fonts, and plugins are all defined in `src/styles/global.css` via the `@theme`, `@plugin`, and `@layer` at-rules. This task is intentionally empty in the v4 plan; the tokens get authored as part of Task 1.5.
 
-- [ ] **Step 1: Replace `tailwind.config.mjs` contents**
+If a `tailwind.config.mjs` was created accidentally (e.g., by an outdated CLI command), delete it before continuing — its contents are ignored in v4.
 
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        cream: {
-          50: '#FAF7F2',
-          100: '#F2EDE3',
-        },
-        sage: {
-          400: '#94A684',
-          600: '#5C7A4F',
-          800: '#2F4A2A',
-        },
-        terra: {
-          400: '#D4896A',
-          600: '#A85A3C',
-        },
-        navy: {
-          900: '#1F2937',
-        },
-      },
-      fontFamily: {
-        serif: ['Lora', 'Georgia', 'serif'],
-        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            '--tw-prose-body': '#1F2937',
-            '--tw-prose-headings': '#1F2937',
-            'font-family': '"DM Sans", system-ui, sans-serif',
-            'line-height': '1.7',
-          },
-        },
-      },
-    },
-  },
-  plugins: [],
-};
-```
-
-- [ ] **Step 2: Commit**
+- [ ] **Step 1: Confirm there is no `tailwind.config.mjs` in the repo**
 
 ```bash
-git add tailwind.config.mjs
-git commit -m "feat: add muted-earth tailwind theme tokens"
+ls inflammafree/tailwind.config.* 2>&1 || echo "absent"
 ```
 
-### Task 1.5: Create global stylesheet with Tailwind + Google Fonts
+Expected: "absent" or no matching file. If a config file exists, delete it:
+
+```bash
+rm inflammafree/tailwind.config.mjs
+git add -A
+git commit -m "chore: remove stray tailwind v3 config (using v4 css-based config)"
+```
+
+If absent, no commit needed — proceed to Task 1.5.
+
+### Task 1.5: Create global stylesheet with Tailwind v4 + theme tokens + Google Fonts
 
 **Files:**
 - Create: `src/styles/global.css`
@@ -292,21 +263,33 @@ git commit -m "feat: add muted-earth tailwind theme tokens"
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --color-cream-50: #FAF7F2;
+  --color-cream-100: #F2EDE3;
+  --color-sage-400: #94A684;
+  --color-sage-600: #5C7A4F;
+  --color-sage-800: #2F4A2A;
+  --color-terra-400: #D4896A;
+  --color-terra-600: #A85A3C;
+  --color-navy-900: #1F2937;
+
+  --font-serif: 'Lora', Georgia, serif;
+  --font-sans: '"DM Sans"', system-ui, sans-serif;
+  --font-mono: '"JetBrains Mono"', monospace;
+}
 
 @layer base {
   html {
-    background-color: #FAF7F2; /* cream-50 */
-    color: #1F2937;            /* navy-900 */
-    font-family: 'DM Sans', system-ui, sans-serif;
+    background-color: var(--color-cream-50);
+    color: var(--color-navy-900);
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lora', Georgia, serif;
+    font-family: var(--font-serif);
     font-weight: 600;
   }
 
@@ -317,12 +300,12 @@ git commit -m "feat: add muted-earth tailwind theme tokens"
 
   a:hover {
     text-decoration: underline;
-    color: #2F4A2A; /* sage-800 */
+    color: var(--color-sage-800);
   }
 
   *:focus-visible {
     outline: none;
-    box-shadow: 0 0 0 2px #FAF7F2, 0 0 0 4px #94A684;
+    box-shadow: 0 0 0 2px var(--color-cream-50), 0 0 0 4px var(--color-sage-400);
     border-radius: 4px;
   }
 
@@ -336,11 +319,13 @@ git commit -m "feat: add muted-earth tailwind theme tokens"
 }
 ```
 
+In Tailwind v4, every entry in `@theme` becomes a generated utility class automatically. So `--color-sage-600` produces `bg-sage-600`, `text-sage-600`, `border-sage-600`, etc. The standard color palette (`slate-*`, `amber-*`, `white`, `black`, etc.) is included by default — no need to redefine those.
+
 - [ ] **Step 2: Commit**
 
 ```bash
 git add src/styles/global.css
-git commit -m "feat: add global stylesheet with fonts and base styles"
+git commit -m "feat: add global stylesheet with theme tokens, fonts, base styles"
 ```
 
 ### Task 1.6: Replace the default homepage with a hello-world that uses the theme
@@ -2641,36 +2626,37 @@ const topFoods = foodsForCondition.slice(0, 12);
 </Base>
 ```
 
-- [ ] **Step 2: Add the prose typography plugin**
+- [ ] **Step 2: Add the prose typography plugin (Tailwind v4 style)**
 
-Run: `npm install -D @tailwindcss/typography`
+Install:
 
-Modify `tailwind.config.mjs` to add the plugin:
-
-```js
-/** @type {import('tailwindcss').Config} */
-export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}'],
-  theme: {
-    extend: {
-      colors: {
-        cream: { 50: '#FAF7F2', 100: '#F2EDE3' },
-        sage: { 400: '#94A684', 600: '#5C7A4F', 800: '#2F4A2A' },
-        terra: { 400: '#D4896A', 600: '#A85A3C' },
-        navy: { 900: '#1F2937' },
-      },
-      fontFamily: {
-        serif: ['Lora', 'Georgia', 'serif'],
-        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-        mono: ['"JetBrains Mono"', 'monospace'],
-      },
-    },
-  },
-  plugins: [require('@tailwindcss/typography')],
-};
+```bash
+npm install -D @tailwindcss/typography
 ```
 
-(Note: this changes the config from ESM import-only to CommonJS `require`. Either is fine since it's a config file. If your project enforces ESM, instead use `import typography from '@tailwindcss/typography'` and reference it.)
+In Tailwind v4, plugins are registered via the `@plugin` directive in CSS, not in a JS config. Edit `src/styles/global.css` and add this line near the top, immediately after `@import "tailwindcss";`:
+
+```css
+@plugin "@tailwindcss/typography";
+```
+
+Final order at the top of `global.css`:
+
+```css
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=DM+Sans:wght@400;500&family=JetBrains+Mono&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* ... existing theme tokens ... */
+}
+
+@layer base {
+  /* ... existing base styles ... */
+}
+```
+
+This makes `prose`, `prose-lg`, `max-w-none`, etc. available as utility classes.
 
 - [ ] **Step 3: Build to verify the migraine page renders**
 
@@ -2686,7 +2672,7 @@ Stop with Ctrl+C.
 - [ ] **Step 4: Commit**
 
 ```bash
-git add src/pages/conditions/[slug].astro tailwind.config.mjs package.json package-lock.json
+git add src/pages/conditions/[slug].astro src/styles/global.css package.json package-lock.json
 git commit -m "feat: add condition page template with derived top foods"
 ```
 
