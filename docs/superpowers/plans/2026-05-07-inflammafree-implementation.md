@@ -482,16 +482,19 @@ concurrency:
   group: pages
   cancel-in-progress: true
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: Build with Astro
         uses: withastro/action@v3
         with:
-          node-version: 20
+          node-version: 22
   deploy:
     needs: build
     runs-on: ubuntu-latest
@@ -503,6 +506,8 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 ```
+
+`FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true` opts the workflow into Node 24 for all JS-action runtimes, eliminating the Node 20 deprecation warnings GH started emitting in late 2025. Once Node 24 becomes the default (June 2026) the env var is harmless and can be removed.
 
 - [ ] **Step 2: Commit and push**
 
