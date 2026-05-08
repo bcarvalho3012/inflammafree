@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import { allFoods } from '../lib/foods.ts';
 ---
 
 <Base title="InflammaFree">
@@ -10,7 +11,7 @@ import Base from '../layouts/Base.astro';
       with detailed coverage for migraines, arthritis, gut health, and other inflammatory conditions.
     </p>
     <p class="mt-12 text-sm text-slate-500">
-      Site shell complete. Real content arriving in subsequent phases.
+      Database currently has {allFoods.length} foods. Real homepage in Phase 6.
     </p>
   </section>
 </Base>
