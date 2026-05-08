@@ -1,0 +1,19 @@
+---
+import type { EvidenceStrength } from '../lib/types';
+
+interface Props {
+  strength: EvidenceStrength;
+}
+
+const { strength } = Astro.props;
+
+const styles: Record<EvidenceStrength, { classes: string; label: string }> = {
+  strong: { classes: 'bg-sage-600 text-cream-50', label: 'Strong evidence' },
+  moderate: { classes: 'bg-sage-400 text-cream-50', label: 'Moderate evidence' },
+  emerging: { classes: 'border border-terra-400 text-terra-600', label: 'Emerging evidence' },
+};
+
+const { classes, label } = styles[strength];
+---
+
+<span class={`inline-block rounded-full px-2.5 py-0.5 text-xs ${classes}`}>{label}</span>
