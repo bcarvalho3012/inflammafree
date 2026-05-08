@@ -1334,16 +1334,19 @@ git commit -m "feat: add five seed foods (turmeric, ginger, salmon, blueberries,
 ### Task 3.5: Set up the Astro content collection for conditions
 
 **Files:**
-- Create: `src/content/config.ts`
+- Create: `src/content.config.ts` (note: at the root of `src/`, NOT inside `content/` — Astro v6 changed this location)
 
-- [ ] **Step 1: Create `src/content/config.ts`**
+> **Astro v6 note.** v6 fully removed the legacy `defineCollection({ type: 'content', ... })` API and moved the config file from `src/content/config.ts` to `src/content.config.ts`. Each collection must specify a loader explicitly. We use the built-in `glob` loader.
+
+- [ ] **Step 1: Create `src/content.config.ts`**
 
 ```ts
 import { defineCollection, z } from 'astro:content';
-import { CONDITION_SLUGS } from '../lib/types';
+import { glob } from 'astro/loaders';
+import { CONDITION_SLUGS } from './lib/types';
 
 const conditions = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/conditions' }),
   schema: z.object({
     slug: z.enum(CONDITION_SLUGS),
     name: z.string(),
@@ -1365,10 +1368,12 @@ const conditions = defineCollection({
 export const collections = { conditions };
 ```
 
+The import path is `./lib/types` (single dot) because the config now sits at `src/` root, not under `src/content/`.
+
 - [ ] **Step 2: Commit**
 
 ```bash
-git add src/content/config.ts
+git add src/content.config.ts
 git commit -m "feat: define conditions content collection schema"
 ```
 
@@ -3537,17 +3542,18 @@ git commit -m "feat: add bibliography builder grouping citations by condition"
 ### Task 6.13: Author the science page content
 
 **Files:**
-- Modify: `src/content/config.ts` (add standalone collection)
+- Modify: `src/content.config.ts` (add standalone collection)
 - Create: `src/content/standalone/science.md`
 
-- [ ] **Step 1: Update `src/content/config.ts` to register the standalone collection**
+- [ ] **Step 1: Update `src/content.config.ts` to register the standalone collection**
 
 ```ts
 import { defineCollection, z } from 'astro:content';
-import { CONDITION_SLUGS } from '../lib/types';
+import { glob } from 'astro/loaders';
+import { CONDITION_SLUGS } from './lib/types';
 
 const conditions = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/conditions' }),
   schema: z.object({
     slug: z.enum(CONDITION_SLUGS),
     name: z.string(),
@@ -3567,7 +3573,7 @@ const conditions = defineCollection({
 });
 
 const standalone = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '*.md', base: './src/content/standalone' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -3640,7 +3646,7 @@ Expected: passes. The standalone collection has one entry; no page consumes it y
 - [ ] **Step 4: Commit**
 
 ```bash
-git add src/content/config.ts src/content/standalone/science.md
+git add src/content.config.ts src/content/standalone/science.md
 git commit -m "feat: author science page content and register standalone collection"
 ```
 
@@ -3733,14 +3739,15 @@ git commit -m "feat: build science page with auto-generated bibliography"
 
 - [ ] **Step 1: Update content collection schema for meal-plan-style entries**
 
-Modify `src/content/config.ts` to add a meal-plan schema:
+Modify `src/content.config.ts` to add a meal-plan collection:
 
 ```ts
 import { defineCollection, z } from 'astro:content';
-import { CONDITION_SLUGS } from '../lib/types';
+import { glob } from 'astro/loaders';
+import { CONDITION_SLUGS } from './lib/types';
 
 const conditions = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/conditions' }),
   schema: z.object({
     slug: z.enum(CONDITION_SLUGS),
     name: z.string(),
@@ -3760,7 +3767,7 @@ const conditions = defineCollection({
 });
 
 const standalone = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '*.md', base: './src/content/standalone' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -3768,7 +3775,7 @@ const standalone = defineCollection({
 });
 
 const mealPlan = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '*.md', base: './src/content/mealPlan' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -3914,7 +3921,7 @@ Open `http://localhost:4321/inflammafree/meal-plan`. Expected: timeline of 5 mea
 - [ ] **Step 5: Commit**
 
 ```bash
-git add src/content/config.ts src/content/mealPlan/example-day.md src/pages/meal-plan.astro
+git add src/content.config.ts src/content/mealPlan/example-day.md src/pages/meal-plan.astro
 git commit -m "feat: build meal plan page with single example day"
 ```
 
