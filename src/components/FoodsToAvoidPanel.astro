@@ -1,0 +1,35 @@
+---
+interface FoodToAvoid {
+  name: string;
+  reason: string;
+}
+
+interface Props {
+  items: FoodToAvoid[];
+}
+
+const { items } = Astro.props;
+---
+
+{items.length > 0 && (
+  <section class="mt-12">
+    <div class="rounded-xl bg-terra-400/10 border-l-4 border-terra-600 p-6">
+      <h2 class="flex items-center gap-2 text-2xl font-serif text-navy-900">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A85A3C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+          <line x1="12" y1="9" x2="12" y2="13"/>
+          <line x1="12" y1="17" x2="12.01" y2="17"/>
+        </svg>
+        Foods to avoid
+      </h2>
+      <ul class="mt-4 space-y-3">
+        {items.map((item) => (
+          <li>
+            <p class="font-medium text-navy-900">{item.name}</p>
+            <p class="mt-0.5 text-sm text-slate-600">{item.reason}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}
