@@ -1,0 +1,13 @@
+---
+interface Props {
+  score: number;
+}
+
+const { score } = Astro.props;
+const dotColor = score >= 8 ? 'bg-sage-600' : score >= 5 ? 'bg-amber-500' : 'bg-terra-400';
+---
+
+<span class="inline-flex items-center gap-1.5 text-sm" aria-label={`Anti-inflammatory score: ${score} out of 10`}>
+  <span class={`inline-block w-2 h-2 rounded-full ${dotColor}`} aria-hidden="true"></span>
+  <span class="font-medium text-navy-900">{score}<span class="text-slate-500">/10</span></span>
+</span>
