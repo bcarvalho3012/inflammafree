@@ -1,1 +1,128 @@
-[]
+[
+  {
+    "id": "turmeric",
+    "name": "Turmeric",
+    "category": "spice",
+    "description": "Bright yellow root used in South Asian cooking; one of the most studied anti-inflammatory foods, valued for its broad activity across multiple inflammatory pathways.",
+    "antiInflammatoryScore": 9,
+    "activeCompounds": [
+      {
+        "name": "Curcumin",
+        "mechanism": "Inhibits NF-κB pathway, reduces COX-2 expression, lowers TNF-α and IL-6 levels"
+      }
+    ],
+    "conditions": ["migraine", "arthritis", "gut", "cardiovascular", "autoimmune", "skin", "pain", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Use ground or fresh root; add to oil-based dishes for absorption",
+      "dosage": "500-1000 mg curcumin equivalent daily",
+      "bioavailability": "Pair with black pepper (piperine) — increases absorption up to 2000%",
+      "cautions": "May interact with blood thinners; consult provider if on warfarin"
+    }
+  },
+  {
+    "id": "ginger",
+    "name": "Ginger",
+    "category": "spice",
+    "description": "Aromatic root with established anti-inflammatory and antiemetic properties; especially useful for migraine and pain conditions.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Gingerols",
+        "mechanism": "Inhibits prostaglandin and leukotriene synthesis; modulates COX and LOX pathways"
+      },
+      {
+        "name": "Shogaols",
+        "mechanism": "Reduces TNF-α and IL-6 production; antioxidant effects on lipid peroxidation"
+      }
+    ],
+    "conditions": ["migraine", "arthritis", "gut", "pain", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Fresh root grated or sliced; or 1-2 g powdered",
+      "dosage": "1-2 g daily for migraine prophylaxis",
+      "bioavailability": "Active compounds are heat-stable; absorption is good without enhancers",
+      "cautions": "May increase bleeding risk at high doses with anticoagulants"
+    }
+  },
+  {
+    "id": "salmon",
+    "name": "Wild Salmon",
+    "category": "protein",
+    "description": "Fatty cold-water fish rich in long-chain omega-3 fatty acids EPA and DHA, with strong evidence for cardiovascular and autoimmune inflammation.",
+    "antiInflammatoryScore": 9,
+    "activeCompounds": [
+      {
+        "name": "EPA (eicosapentaenoic acid)",
+        "mechanism": "Competes with arachidonic acid for COX/LOX enzymes, shifting eicosanoid production toward less inflammatory mediators"
+      },
+      {
+        "name": "DHA (docosahexaenoic acid)",
+        "mechanism": "Precursor to resolvins and protectins, which actively resolve inflammation"
+      }
+    ],
+    "conditions": ["migraine", "arthritis", "cardiovascular", "autoimmune", "skin", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Wild-caught preferred; bake, grill, or pan-sear",
+      "dosage": "2-3 servings (3-4 oz each) per week",
+      "bioavailability": "Cooking does not significantly degrade omega-3s; avoid deep-frying",
+      "cautions": "Some farmed varieties are higher in omega-6; check for sustainable sourcing"
+    }
+  },
+  {
+    "id": "blueberries",
+    "name": "Blueberries",
+    "category": "fruit",
+    "description": "Deeply pigmented berries packed with anthocyanins; strong evidence for vascular and neurological inflammation.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins",
+        "mechanism": "Reduce CRP and IL-6; protect endothelial cells from oxidative damage"
+      },
+      {
+        "name": "Pterostilbene",
+        "mechanism": "Activates SIRT1 pathway and AMPK, improving cellular stress response"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Fresh or frozen — frozen retains anthocyanins well",
+      "dosage": "1/2 to 1 cup daily",
+      "bioavailability": "Wild blueberries have ~2x the anthocyanin content of cultivated",
+      "cautions": "No common interactions; high-fiber serving may be a trigger for some IBS patterns"
+    }
+  },
+  {
+    "id": "extra-virgin-olive-oil",
+    "name": "Extra Virgin Olive Oil",
+    "category": "fat-oil",
+    "description": "Unrefined olive oil rich in monounsaturated fats and polyphenols; foundational fat in the Mediterranean diet pattern.",
+    "antiInflammatoryScore": 9,
+    "activeCompounds": [
+      {
+        "name": "Oleocanthal",
+        "mechanism": "Inhibits COX-1 and COX-2 enzymes similarly to ibuprofen at much lower potency"
+      },
+      {
+        "name": "Hydroxytyrosol",
+        "mechanism": "Antioxidant; reduces oxidized LDL and lowers vascular inflammation markers"
+      }
+    ],
+    "conditions": ["arthritis", "cardiovascular", "autoimmune", "skin", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Use unrefined; drizzle on cooked food rather than for high-heat frying",
+      "dosage": "2-4 tablespoons daily",
+      "bioavailability": "Pair with vegetables to absorb fat-soluble compounds",
+      "cautions": "Quality varies significantly — choose first cold-pressed, dark-glass-bottled brands"
+    }
+  }
+]
