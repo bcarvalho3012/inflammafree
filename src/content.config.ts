@@ -1,8 +1,9 @@
 import { defineCollection, z } from 'astro:content';
-import { CONDITION_SLUGS } from '../lib/types';
+import { glob } from 'astro/loaders';
+import { CONDITION_SLUGS } from './lib/types';
 
 const conditions = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/conditions' }),
   schema: z.object({
     slug: z.enum(CONDITION_SLUGS),
     name: z.string(),
