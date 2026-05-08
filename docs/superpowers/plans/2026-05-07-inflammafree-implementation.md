@@ -2547,9 +2547,11 @@ git commit -m "feat: add FoodsToAvoidPanel component"
 
 - [ ] **Step 1: Create `src/pages/conditions/[slug].astro`**
 
+> **Astro v6 note.** With the loader API, collection entries expose `entry.id` (the file's id) instead of the legacy `entry.slug`, and rendering uses the standalone `render(entry)` function imported from `astro:content` instead of `entry.render()`. Both changes are reflected below.
+
 ```astro
 ---
-import { getCollection, type CollectionEntry } from 'astro:content';
+import { getCollection, render, type CollectionEntry } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import FoodCard from '../../components/FoodCard.astro';
 import FoodsToAvoidPanel from '../../components/FoodsToAvoidPanel.astro';
@@ -2559,7 +2561,7 @@ import { sortFoods } from '../../lib/filter';
 export async function getStaticPaths() {
   const conditions = await getCollection('conditions');
   return conditions.map((entry) => ({
-    params: { slug: entry.slug },
+    params: { slug: entry.id },
     props: { entry },
   }));
 }
@@ -2569,7 +2571,7 @@ interface Props {
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 const data = entry.data;
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 
@@ -3659,13 +3661,13 @@ git commit -m "feat: author science page content and register standalone collect
 
 ```astro
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { buildBibliography } from '../lib/bibliography';
 
 const science = await getEntry('standalone', 'science');
 if (!science) throw new Error('science.md missing from content/standalone/');
-const { Content } = await science.render();
+const { Content } = await render(science);
 
 const bibliography = buildBibliography();
 ---
@@ -3861,13 +3863,13 @@ Adjust portions to your appetite and goals. Hydrate consistently. If you eat ear
 
 ```astro
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { findFoodById } from '../lib/foods';
 
 const plan = await getEntry('mealPlan', 'example-day');
 if (!plan) throw new Error('example-day meal plan missing');
-const { Content } = await plan.render();
+const { Content } = await render(plan);
 const base = import.meta.env.BASE_URL.replace(/\/$/, '');
 ---
 
