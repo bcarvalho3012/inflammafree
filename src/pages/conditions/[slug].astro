@@ -1,0 +1,86 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import FoodCard from '../../components/FoodCard.astro';
+import FoodsToAvoidPanel from '../../components/FoodsToAvoidPanel.astro';
+import { allFoods } from '../../lib/foods';
+import { sortFoods } from '../../lib/filter';
+
+export async function getStaticPaths() {
+  const conditions = await getCollection('conditions');
+  return conditions.map((entry) => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'conditions'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const data = entry.data;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const foodsForCondition = sortFoods(
+  allFoods.filter((f) => f.conditions.includes(data.slug)),
+  'score',
+);
+const topFoods = foodsForCondition.slice(0, 12);
+---
+
+<Base title={data.name} description={data.shortDescription}>
+  <section class="bg-cream-100/40">
+    <div class="mx-auto max-w-3xl px-6 py-16">
+      <p class="text-sm uppercase tracking-wide text-sage-600">Condition</p>
+      <h1 class="mt-2 text-4xl md:text-5xl font-serif">{data.name}</h1>
+      <p class="mt-4 text-lg text-slate-600 leading-relaxed">{data.shortDescription}</p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        {data.pathways.map((p) => (
+          <span class="inline-block rounded-full border border-sage-400 px-3 py-0.5 text-xs text-sage-800">{p}</span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <article class="mx-auto max-w-3xl px-6 py-16 prose prose-lg max-w-none">
+    <Content />
+  </article>
+
+  <section class="mx-auto max-w-6xl px-6 py-8">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-3xl font-serif">Top foods for {data.name.toLowerCase()}</h2>
+      {foodsForCondition.length > 12 && (
+        <a href={`${base}/foods?condition=${data.slug}`} class="text-sm text-sage-800 hover:underline">
+          See all {foodsForCondition.length} →
+        </a>
+      )}
+    </div>
+    {topFoods.length === 0 ? (
+      <p class="text-slate-500">No foods yet — content is being added in Phase 6.</p>
+    ) : (
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {topFoods.map((food) => <FoodCard food={food} />)}
+      </div>
+    )}
+  </section>
+
+  {data.dietaryPatterns.length > 0 && (
+    <section class="mx-auto max-w-3xl px-6 py-8">
+      <h2 class="text-3xl font-serif">Dietary patterns with evidence</h2>
+      <ul class="mt-6 space-y-4">
+        {data.dietaryPatterns.map((pattern) => (
+          <li class="rounded-lg bg-cream-100 p-5">
+            <p class="font-medium text-navy-900">{pattern.name}</p>
+            <p class="mt-1 text-sm text-slate-600">{pattern.evidence}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  )}
+
+  <div class="mx-auto max-w-3xl px-6 pb-16">
+    <FoodsToAvoidPanel items={data.foodsToAvoid} />
+  </div>
+</Base>
