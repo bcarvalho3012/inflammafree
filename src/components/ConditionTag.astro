@@ -1,0 +1,12 @@
+---
+import { CONDITION_LABELS } from '../lib/types';
+import type { ConditionSlug } from '../lib/types';
+
+interface Props {
+  slug: ConditionSlug;
+}
+
+const { slug } = Astro.props;
+---
+
+<span class="inline-block rounded-full bg-cream-100 px-2 py-0.5 text-xs text-slate-500">{CONDITION_LABELS[slug]}</span>
