@@ -50,8 +50,8 @@ const topFoods = foodsForCondition.slice(0, 12);
     </div>
   </article>
 
-  <section class="mx-auto max-w-6xl px-6 py-8">
-    <div class="flex items-baseline justify-between mb-6">
+  <section class="mx-auto max-w-3xl px-6 py-8">
+    <div class="flex items-baseline justify-between mb-6 flex-wrap gap-2">
       <h2 class="text-3xl font-serif">Top foods for {data.name.toLowerCase()}</h2>
       {foodsForCondition.length > 12 && (
         <a href={`${base}/foods?condition=${data.slug}`} class="text-sm text-sage-800 hover:underline">
@@ -62,7 +62,7 @@ const topFoods = foodsForCondition.slice(0, 12);
     {topFoods.length === 0 ? (
       <p class="text-slate-500">No foods yet — content is being added in Phase 6.</p>
     ) : (
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {topFoods.map((food) => <FoodCard food={food} />)}
       </div>
     )}
