@@ -1154,5 +1154,135 @@
       "bioavailability": "Italian (flat-leaf) parsley has stronger flavor and slightly higher phenolic content than curly",
       "cautions": "High vitamin K may interfere with warfarin dosing"
     }
+  },
+  {
+    "id": "oats",
+    "name": "Oats",
+    "category": "grain",
+    "description": "Whole grain rich in soluble beta-glucan fiber and unique avenanthramide polyphenols with vascular and skin anti-inflammatory effects.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Beta-glucan",
+        "mechanism": "Soluble fiber that binds cholesterol and feeds beneficial gut bacteria"
+      },
+      {
+        "name": "Avenanthramides",
+        "mechanism": "Polyphenols unique to oats; reduce skin inflammation and vascular oxidative stress"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Choose rolled or steel-cut over instant; soak overnight for easier digestion",
+      "dosage": "1/2 cup dry oats daily",
+      "bioavailability": "Colloidal oatmeal applied topically also reduces eczema and skin inflammation",
+      "cautions": "Cross-contamination with gluten common — choose certified gluten-free if celiac"
+    }
+  },
+  {
+    "id": "quinoa",
+    "name": "Quinoa",
+    "category": "grain",
+    "description": "Gluten-free pseudocereal that supplies complete protein along with quercetin and kaempferol flavonoids.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Quercetin",
+        "mechanism": "Mast cell stabilizer; inhibits NF-κB"
+      },
+      {
+        "name": "Complete protein profile",
+        "mechanism": "Supplies all essential amino acids supporting tissue repair"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Rinse before cooking to remove bitter saponins; toast briefly in oil for flavor",
+      "dosage": "1/2 cup cooked daily",
+      "bioavailability": "Soaking overnight reduces antinutrients and improves mineral absorption",
+      "cautions": "Saponins on the outer layer can irritate the gut if not rinsed"
+    }
+  },
+  {
+    "id": "brown-rice",
+    "name": "Brown Rice",
+    "category": "grain",
+    "description": "Whole-grain rice retaining bran and germ; supplies magnesium, fiber, and lignans absent in white rice.",
+    "antiInflammatoryScore": 5,
+    "activeCompounds": [
+      {
+        "name": "Magnesium",
+        "mechanism": "Cofactor in vascular and neural function; reduces inflammation markers"
+      },
+      {
+        "name": "Insoluble fiber",
+        "mechanism": "Supports regular bowel transit and feeds gut microbiota"
+      }
+    ],
+    "conditions": ["gut", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Soak before cooking; consider pressure cooking for digestibility",
+      "dosage": "1/2 cup cooked, several times weekly",
+      "bioavailability": "Soaking and rinsing reduces both phytic acid and inorganic arsenic content",
+      "cautions": "Higher arsenic exposure than other grains — rotate with quinoa, buckwheat, and oats"
+    }
+  },
+  {
+    "id": "buckwheat",
+    "name": "Buckwheat",
+    "category": "grain",
+    "description": "Gluten-free pseudocereal high in rutin, a flavonoid that strengthens capillaries and supports vascular and neural health.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Rutin",
+        "mechanism": "Flavonoid that reduces capillary fragility and inhibits platelet aggregation"
+      },
+      {
+        "name": "Magnesium",
+        "mechanism": "Vascular and neural stabilizer; reduces migraine susceptibility"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Cook groats as a porridge, or use buckwheat flour for pancakes and soba noodles",
+      "dosage": "1/2 cup cooked daily",
+      "bioavailability": "Toasting groats (kasha) deepens flavor without destroying rutin",
+      "cautions": "Despite the name, contains no wheat; rare cases of buckwheat allergy exist"
+    }
+  },
+  {
+    "id": "barley",
+    "name": "Barley",
+    "category": "grain",
+    "description": "Ancient whole grain particularly rich in beta-glucan fiber; consistently lowers LDL cholesterol and improves glycemic control.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Beta-glucan",
+        "mechanism": "Soluble fiber that lowers cholesterol and feeds beneficial gut bacteria"
+      },
+      {
+        "name": "Lignans",
+        "mechanism": "Phytoestrogens with cardiovascular and anti-inflammatory effects"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use hulled (whole) barley in soups, salads, and pilafs; avoid pearled which loses most fiber",
+      "dosage": "1/2 cup cooked daily",
+      "bioavailability": "Beta-glucan is preserved through cooking; soaking shortens cook time",
+      "cautions": "Contains gluten — not suitable for celiac or gluten-sensitive individuals"
+    }
   }
 ]
