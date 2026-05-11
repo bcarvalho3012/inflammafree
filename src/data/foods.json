@@ -380,5 +380,387 @@
       "bioavailability": "Pair with nut butter to slow glycemic response",
       "cautions": "Conventional apples carry high pesticide residues; choose organic when feasible"
     }
+  },
+  {
+    "id": "broccoli",
+    "name": "Broccoli",
+    "category": "vegetable",
+    "description": "Cruciferous vegetable and the leading dietary source of sulforaphane, a potent activator of the body's endogenous antioxidant defenses.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Sulforaphane",
+        "mechanism": "Activates Nrf2 pathway, upregulating phase-2 detoxification enzymes and antioxidant defenses"
+      }
+    ],
+    "conditions": ["arthritis", "cardiovascular", "autoimmune", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Lightly steam (3-4 minutes) to preserve sulforaphane while activating the enzyme myrosinase",
+      "dosage": "1 cup daily",
+      "bioavailability": "Sprinkle mustard seed powder or add a few radish slices to cooked broccoli to restore myrosinase activity",
+      "cautions": "High vitamin K can interfere with warfarin dosing"
+    }
+  },
+  {
+    "id": "kale",
+    "name": "Kale",
+    "category": "vegetable",
+    "description": "Dense leafy green packed with magnesium, vitamin K, carotenoids, and sulforaphane precursors; one of the most nutrient-dense foods available.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Lutein and zeaxanthin",
+        "mechanism": "Carotenoids that protect neural and retinal tissue from oxidative damage"
+      },
+      {
+        "name": "Glucosinolates",
+        "mechanism": "Precursors to sulforaphane and indole-3-carbinol; modulate inflammatory and detoxification pathways"
+      }
+    ],
+    "conditions": ["migraine", "arthritis", "cardiovascular", "autoimmune", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Massage raw kale with olive oil and lemon, or lightly sauté with garlic",
+      "dosage": "1-2 cups daily",
+      "bioavailability": "Pair with healthy fats to absorb fat-soluble vitamins and carotenoids",
+      "cautions": "High vitamin K affects warfarin; high oxalates may aggravate kidney stones"
+    }
+  },
+  {
+    "id": "spinach",
+    "name": "Spinach",
+    "category": "vegetable",
+    "description": "Tender leafy green and one of the highest dietary sources of magnesium, folate, and lutein, with relevance to migraine and vascular inflammation.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Magnesium",
+        "mechanism": "Cofactor in over 300 enzymatic reactions; stabilizes vascular and neural membranes"
+      },
+      {
+        "name": "Folate",
+        "mechanism": "Lowers homocysteine, a vascular inflammation marker"
+      }
+    ],
+    "conditions": ["migraine", "cardiovascular", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Briefly sauté or steam — wilting concentrates nutrients and reduces oxalate",
+      "dosage": "1-2 cups raw or 1/2 cup cooked daily",
+      "bioavailability": "Cook spinach to reduce oxalates that bind minerals; pair with vitamin C for iron absorption",
+      "cautions": "High oxalates contraindicated in calcium-oxalate kidney stone formers"
+    }
+  },
+  {
+    "id": "swiss-chard",
+    "name": "Swiss Chard",
+    "category": "vegetable",
+    "description": "Colorful leafy green with thick stems; rich in magnesium and vitamin K and one of few greens supplying betalain pigments.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Magnesium",
+        "mechanism": "Vascular and neural stabilization; reduces migraine susceptibility"
+      },
+      {
+        "name": "Betalains",
+        "mechanism": "Antioxidants that inhibit COX-2 and reduce oxidative stress"
+      }
+    ],
+    "conditions": ["cardiovascular", "migraine"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Sauté both leaves and stems with olive oil and garlic",
+      "dosage": "1 cup cooked daily",
+      "bioavailability": "Briefly cooking improves magnesium and carotenoid availability while reducing oxalates",
+      "cautions": "High vitamin K affects warfarin dosing"
+    }
+  },
+  {
+    "id": "brussels-sprouts",
+    "name": "Brussels Sprouts",
+    "category": "vegetable",
+    "description": "Small cruciferous vegetable with high sulforaphane potential and dense vitamin K content; supports detoxification and joint health.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Sulforaphane",
+        "mechanism": "Activates Nrf2 antioxidant pathway"
+      },
+      {
+        "name": "Vitamin K",
+        "mechanism": "Supports calcium metabolism and reduces vascular calcification"
+      }
+    ],
+    "conditions": ["arthritis", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Roast halved at 400°F until edges caramelize, or shred raw for slaws",
+      "dosage": "1 cup daily",
+      "bioavailability": "Roasting reduces bitterness without destroying most glucosinolates",
+      "cautions": "Can cause gas; high vitamin K affects warfarin"
+    }
+  },
+  {
+    "id": "red-cabbage",
+    "name": "Red Cabbage",
+    "category": "vegetable",
+    "description": "Purple-pigmented cruciferous vegetable that combines anthocyanins with sulforaphane precursors — uncommon among vegetables.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins",
+        "mechanism": "Reduce CRP and improve endothelial function"
+      },
+      {
+        "name": "Sulforaphane",
+        "mechanism": "Activates Nrf2 antioxidant pathway"
+      }
+    ],
+    "conditions": ["gut", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat raw in slaws, lightly braised, or fermented as sauerkraut",
+      "dosage": "1 cup daily",
+      "bioavailability": "Acidic dressings (vinegar, lemon) stabilize anthocyanins and deepen color",
+      "cautions": "No common interactions"
+    }
+  },
+  {
+    "id": "cauliflower",
+    "name": "Cauliflower",
+    "category": "vegetable",
+    "description": "Mild cruciferous vegetable supplying sulforaphane and choline; lower compound density than broccoli but versatile and well-tolerated.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Sulforaphane",
+        "mechanism": "Activates Nrf2; supports detoxification pathways"
+      },
+      {
+        "name": "Choline",
+        "mechanism": "Methyl donor; supports membrane integrity and reduces homocysteine"
+      }
+    ],
+    "conditions": ["arthritis", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Roast florets at high heat, or rice and use as a grain substitute",
+      "dosage": "1 cup daily",
+      "bioavailability": "Light steaming preserves more sulforaphane than boiling",
+      "cautions": "FODMAP-sensitive individuals may experience gas"
+    }
+  },
+  {
+    "id": "beets",
+    "name": "Beets",
+    "category": "vegetable",
+    "description": "Root vegetable rich in betalains and dietary nitrates that lower blood pressure and reduce muscle inflammation.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Betalains",
+        "mechanism": "Inhibit COX-2; antioxidant and anti-inflammatory effects in joint and vascular tissue"
+      },
+      {
+        "name": "Dietary nitrates",
+        "mechanism": "Convert to nitric oxide, improving endothelial function and exercise recovery"
+      }
+    ],
+    "conditions": ["cardiovascular", "pain"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Roast whole in skin, or drink fresh beet juice for highest nitrate dose",
+      "dosage": "1 medium beet or 8 oz juice daily",
+      "bioavailability": "Nitrates are heat-stable; betalains are sensitive to long cooking",
+      "cautions": "May cause harmless red urine; high oxalates for stone formers"
+    }
+  },
+  {
+    "id": "carrots",
+    "name": "Carrots",
+    "category": "vegetable",
+    "description": "Root vegetable rich in beta-carotene, the carotenoid precursor to vitamin A that supports skin and mucosal immunity.",
+    "antiInflammatoryScore": 5,
+    "activeCompounds": [
+      {
+        "name": "Beta-carotene",
+        "mechanism": "Antioxidant carotenoid; precursor to vitamin A for epithelial and immune function"
+      },
+      {
+        "name": "Falcarinol",
+        "mechanism": "Polyacetylene with anti-inflammatory and antiplatelet activity"
+      }
+    ],
+    "conditions": ["skin", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Lightly cook to break cell walls, then eat with fat for carotenoid absorption",
+      "dosage": "1 cup daily",
+      "bioavailability": "Cooking increases beta-carotene bioavailability by ~6x vs. raw",
+      "cautions": "Excess intake can cause harmless yellow-orange skin tint (carotenemia)"
+    }
+  },
+  {
+    "id": "bell-peppers",
+    "name": "Bell Peppers",
+    "category": "vegetable",
+    "description": "Sweet peppers with the highest vitamin C density of common vegetables; red varieties also supply capsanthin and beta-carotene.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Vitamin C",
+        "mechanism": "Antioxidant; cofactor in collagen synthesis"
+      },
+      {
+        "name": "Capsanthin and capsorubin",
+        "mechanism": "Red carotenoids that protect skin and vascular tissue from oxidative damage"
+      }
+    ],
+    "conditions": ["skin", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat raw to maximize vitamin C, or roast to concentrate carotenoids",
+      "dosage": "1 cup daily",
+      "bioavailability": "Red peppers contain ~2x the vitamin C of green; pair with oil for carotenoid uptake",
+      "cautions": "Nightshade-sensitive individuals (rare) may experience joint flares"
+    }
+  },
+  {
+    "id": "sweet-potato",
+    "name": "Sweet Potato",
+    "category": "vegetable",
+    "description": "Starchy tuber rich in beta-carotene; purple varieties additionally supply anthocyanins for combined antioxidant effect.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Beta-carotene",
+        "mechanism": "Vitamin A precursor; supports skin and mucosal immunity"
+      },
+      {
+        "name": "Anthocyanins (purple varieties)",
+        "mechanism": "Reduce CRP; protect vasculature from oxidative damage"
+      }
+    ],
+    "conditions": ["skin", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Roast with skin on for fiber, or bake whole at 400°F",
+      "dosage": "1 medium sweet potato 2-3 times weekly",
+      "bioavailability": "Pair with fat (butter, olive oil) for carotenoid absorption",
+      "cautions": "Higher glycemic load than non-starchy vegetables"
+    }
+  },
+  {
+    "id": "tomatoes",
+    "name": "Tomatoes",
+    "category": "vegetable",
+    "description": "Red fruit eaten as a vegetable; the leading dietary source of lycopene, a potent carotenoid antioxidant.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Lycopene",
+        "mechanism": "Carotenoid antioxidant; reduces oxidized LDL and protects skin from UV damage"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Cooked tomatoes (sauce, paste) deliver more bioavailable lycopene than raw",
+      "dosage": "1/2 cup cooked tomato sauce daily, or 1 large fresh tomato",
+      "bioavailability": "Heat breaks down cell walls and the fat in olive oil dramatically improves lycopene absorption",
+      "cautions": "Nightshade family — rare sensitivity may aggravate joint symptoms"
+    }
+  },
+  {
+    "id": "asparagus",
+    "name": "Asparagus",
+    "category": "vegetable",
+    "description": "Spring vegetable supplying glutathione, inulin fiber, and saponins that support gut and vascular health.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Glutathione",
+        "mechanism": "Master endogenous antioxidant; protects against oxidative damage"
+      },
+      {
+        "name": "Inulin",
+        "mechanism": "Prebiotic fiber that feeds beneficial gut bacteria"
+      }
+    ],
+    "conditions": ["gut", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Steam or roast briefly to preserve glutathione",
+      "dosage": "1 cup (6-8 spears) daily during season",
+      "bioavailability": "Overcooking destroys glutathione; aim for 3-5 minute cook time",
+      "cautions": "Causes harmless sulfur-smelling urine in some individuals"
+    }
+  },
+  {
+    "id": "garlic",
+    "name": "Garlic",
+    "category": "vegetable",
+    "description": "Pungent allium with organosulfur compounds that lower blood pressure, modulate immunity, and support gut microbial balance.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Allicin",
+        "mechanism": "Released when garlic is crushed; antimicrobial and inhibits NF-κB"
+      },
+      {
+        "name": "Diallyl sulfides",
+        "mechanism": "Lipid-soluble organosulfur compounds with cardiovascular and immunomodulatory effects"
+      }
+    ],
+    "conditions": ["cardiovascular", "autoimmune", "gut"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Crush or chop and let rest 10 minutes before cooking to maximize allicin formation",
+      "dosage": "1-2 cloves daily",
+      "bioavailability": "Raw or briefly cooked is most potent; aged garlic extract has different but complementary actions",
+      "cautions": "Increases bleeding risk with anticoagulants; can cause heartburn and odor"
+    }
+  },
+  {
+    "id": "onions",
+    "name": "Onions",
+    "category": "vegetable",
+    "description": "Allium vegetable supplying quercetin and organosulfur compounds; one of the best whole-food sources of quercetin.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Quercetin",
+        "mechanism": "Mast cell stabilizer; inhibits NF-κB-mediated cytokine release"
+      },
+      {
+        "name": "Organosulfur compounds",
+        "mechanism": "Support detoxification and cardiovascular function"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Red onions and shallots have the highest quercetin; eat raw or lightly cooked",
+      "dosage": "1/2 to 1 onion daily",
+      "bioavailability": "Quercetin is heat-stable; outer layers contain more compound than the core",
+      "cautions": "High FODMAP; may trigger IBS symptoms in sensitive individuals"
+    }
   }
 ]
