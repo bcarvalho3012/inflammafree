@@ -762,5 +762,153 @@
       "bioavailability": "Quercetin is heat-stable; outer layers contain more compound than the core",
       "cautions": "High FODMAP; may trigger IBS symptoms in sensitive individuals"
     }
+  },
+  {
+    "id": "sardines",
+    "name": "Sardines",
+    "category": "protein",
+    "description": "Small oily fish that combine the EPA/DHA profile of larger fatty fish with vitamin D, calcium, and a very low mercury burden.",
+    "antiInflammatoryScore": 9,
+    "activeCompounds": [
+      {
+        "name": "EPA and DHA",
+        "mechanism": "Compete with arachidonic acid; precursors to resolvins that actively resolve inflammation"
+      },
+      {
+        "name": "Vitamin D",
+        "mechanism": "Immunomodulator; supports regulatory T-cell function"
+      }
+    ],
+    "conditions": ["cardiovascular", "arthritis", "neurological", "autoimmune"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Canned in olive oil or water; eat the soft bones for calcium",
+      "dosage": "1 tin (3-4 oz) 2-3 times weekly",
+      "bioavailability": "Among the lowest-mercury fish — short food chain and small size",
+      "cautions": "High purines; people with active gout should moderate intake"
+    }
+  },
+  {
+    "id": "mackerel",
+    "name": "Mackerel",
+    "category": "protein",
+    "description": "Oily fish among the densest sources of omega-3s; pick smaller varieties like Atlantic or Spanish mackerel to limit mercury.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "EPA and DHA",
+        "mechanism": "Resolvin and protectin precursors; reduce systemic inflammation"
+      }
+    ],
+    "conditions": ["cardiovascular", "arthritis", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Grill, broil, or smoke; pairs well with strong flavors like lemon and capers",
+      "dosage": "3-4 oz 2 times weekly",
+      "bioavailability": "Atlantic and Spanish mackerel are low-mercury; avoid king mackerel which is high",
+      "cautions": "King mackerel has very high mercury and should be avoided in pregnancy"
+    }
+  },
+  {
+    "id": "anchovies",
+    "name": "Anchovies",
+    "category": "protein",
+    "description": "Tiny oily fish typically cured in salt or oil; deliver concentrated omega-3s with very low mercury exposure.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "EPA and DHA",
+        "mechanism": "Reduce inflammatory eicosanoids; precursors to specialized pro-resolving mediators"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Add to dressings, sauces, and pizza for umami flavor with omega-3 benefit",
+      "dosage": "2-4 fillets several times weekly",
+      "bioavailability": "Oil-packed retains omega-3s well; rinse salt-cured to reduce sodium",
+      "cautions": "High sodium content; people with hypertension should moderate intake"
+    }
+  },
+  {
+    "id": "eggs",
+    "name": "Pasture-Raised Eggs",
+    "category": "protein",
+    "description": "Whole eggs from hens with access to pasture; superior omega-3 and carotenoid content compared to conventional eggs.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Choline",
+        "mechanism": "Methyl donor and structural component of cell membranes; supports neural function"
+      },
+      {
+        "name": "Lutein and zeaxanthin",
+        "mechanism": "Carotenoids that protect retinal and neural tissue from oxidative damage"
+      }
+    ],
+    "conditions": ["neurological", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Soft-cook or poach to preserve heat-sensitive nutrients in the yolk",
+      "dosage": "1-3 whole eggs daily",
+      "bioavailability": "Most carotenoids and choline are in the yolk; cook gently to preserve them",
+      "cautions": "Some autoimmune patients react to egg whites (lysozyme); pasture-raised reduces but does not eliminate this"
+    }
+  },
+  {
+    "id": "oysters",
+    "name": "Oysters",
+    "category": "protein",
+    "description": "Bivalve mollusks with the highest zinc density of any common food; also supply omega-3s, B12, and copper.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Zinc",
+        "mechanism": "Cofactor in over 300 enzymes; essential for skin integrity and immune regulation"
+      },
+      {
+        "name": "Vitamin B12",
+        "mechanism": "Supports neural function and homocysteine clearance"
+      }
+    ],
+    "conditions": ["skin", "autoimmune", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Raw on the half-shell, grilled, or in a stew; pair with lemon",
+      "dosage": "6 oysters provides several days' worth of zinc",
+      "bioavailability": "Animal-source zinc is far more bioavailable than plant-source",
+      "cautions": "Risk of foodborne illness if raw — source from reputable suppliers; shellfish allergy"
+    }
+  },
+  {
+    "id": "bone-broth",
+    "name": "Bone Broth",
+    "category": "protein",
+    "description": "Long-simmered stock from animal bones rich in collagen-derived peptides, glutamine, and minerals; traditional remedy for gut and joint health.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Collagen peptides",
+        "mechanism": "Supply glycine and proline; support connective tissue and intestinal barrier"
+      },
+      {
+        "name": "Glutamine",
+        "mechanism": "Primary fuel for enterocytes; supports gut barrier function"
+      }
+    ],
+    "conditions": ["gut", "arthritis", "skin"],
+    "evidenceStrength": "emerging",
+    "citations": null,
+    "tips": {
+      "preparation": "Simmer bones with vinegar for 12-24 hours; add vegetables and herbs in the last hour",
+      "dosage": "1-2 cups daily, especially during gut healing protocols",
+      "bioavailability": "A splash of vinegar in the cooking water extracts more minerals from bone",
+      "cautions": "High histamine content may trigger symptoms in histamine-intolerant individuals"
+    }
   }
 ]
