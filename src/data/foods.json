@@ -1388,5 +1388,135 @@
       "bioavailability": "Virgin (unrefined) preserves polyphenols; refined has higher smoke point",
       "cautions": "Raises LDL cholesterol in many individuals; use as part of a varied fat profile rather than as the dominant fat"
     }
+  },
+  {
+    "id": "green-tea",
+    "name": "Green Tea",
+    "category": "beverage",
+    "description": "Unoxidized tea leaves brewed as an infusion; one of the most consistently studied anti-inflammatory beverages, with effects across vascular, neural, and immune systems.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "EGCG (epigallocatechin gallate)",
+        "mechanism": "Catechin polyphenol that inhibits NF-κB, reduces oxidative stress, and modulates immune cell signaling"
+      },
+      {
+        "name": "L-theanine",
+        "mechanism": "Amino acid that promotes calm alertness and modulates inflammatory cytokine response to stress"
+      }
+    ],
+    "conditions": ["neurological", "cardiovascular", "autoimmune", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Steep at 175°F for 2-3 minutes; overheating produces bitter astringent compounds",
+      "dosage": "3-4 cups daily",
+      "bioavailability": "Adding a squeeze of lemon increases catechin stability and absorption",
+      "cautions": "Contains caffeine; can reduce iron absorption — drink between meals if iron-deficient"
+    }
+  },
+  {
+    "id": "matcha",
+    "name": "Matcha",
+    "category": "beverage",
+    "description": "Powdered Japanese green tea consumed as a suspension of whole leaf; delivers concentrated EGCG and L-theanine relative to brewed green tea.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "EGCG (concentrated)",
+        "mechanism": "Whole-leaf consumption delivers 3-10x the catechin dose of steeped green tea"
+      },
+      {
+        "name": "L-theanine",
+        "mechanism": "Promotes calm focus and dampens stress-induced inflammatory signaling"
+      }
+    ],
+    "conditions": ["neurological", "cardiovascular", "autoimmune"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Whisk 1 tsp into 6 oz hot (not boiling) water until frothy",
+      "dosage": "1-2 cups daily",
+      "bioavailability": "Ceremonial-grade matcha has higher L-theanine; culinary grade is fine for daily use",
+      "cautions": "Higher caffeine per serving than steeped tea; may interact with stimulant medications"
+    }
+  },
+  {
+    "id": "rooibos-tea",
+    "name": "Rooibos Tea",
+    "category": "beverage",
+    "description": "Caffeine-free South African herbal infusion with a unique flavonoid profile; suitable for evening use and sensitive individuals.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Aspalathin",
+        "mechanism": "Flavonoid unique to rooibos that improves glucose regulation and reduces oxidative stress"
+      },
+      {
+        "name": "Nothofagin",
+        "mechanism": "Reduces vascular inflammation and improves endothelial function"
+      }
+    ],
+    "conditions": ["cardiovascular", "autoimmune"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Steep 1 tsp loose tea in boiling water for 5-7 minutes",
+      "dosage": "2-3 cups daily",
+      "bioavailability": "Green (unfermented) rooibos has higher aspalathin than the more common red (fermented) variety",
+      "cautions": "Generally well-tolerated; rare estrogenic effects with very high intake"
+    }
+  },
+  {
+    "id": "hibiscus-tea",
+    "name": "Hibiscus Tea",
+    "category": "beverage",
+    "description": "Tart red herbal infusion from Hibiscus sabdariffa flowers; clinical trials show modest but consistent blood pressure reduction.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins",
+        "mechanism": "Reduce vascular oxidative stress and improve endothelial function"
+      },
+      {
+        "name": "Hibiscus acids",
+        "mechanism": "Mild ACE-inhibitor activity contributing to blood pressure reduction"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Steep dried calyces in hot water 5-10 minutes; enjoy hot or iced",
+      "dosage": "2-3 cups daily, studied for blood pressure benefit",
+      "bioavailability": "Cold-brewing for 1-2 hours extracts anthocyanins gently and reduces tartness",
+      "cautions": "May enhance the effect of antihypertensive medications; can interact with chloroquine"
+    }
+  },
+  {
+    "id": "coffee",
+    "name": "Coffee (in moderation)",
+    "category": "beverage",
+    "description": "Roasted coffee bean infusion; the largest source of antioxidants in the typical Western diet, with documented neurological and metabolic benefits at moderate doses.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Chlorogenic acid",
+        "mechanism": "Phenolic antioxidant; improves glucose handling and reduces inflammatory markers"
+      },
+      {
+        "name": "Caffeine",
+        "mechanism": "Adenosine receptor antagonist; supports alertness and reduces neuroinflammation at moderate doses"
+      }
+    ],
+    "conditions": ["neurological", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Filter coffee preferred — paper filters trap cafestol/kahweol diterpenes that raise LDL",
+      "dosage": "2-4 cups daily; beyond that, benefits plateau and adverse effects increase",
+      "bioavailability": "Light roasts retain more chlorogenic acid; dark roasts have a slightly different antioxidant profile",
+      "cautions": "Can trigger anxiety, palpitations, GERD, or migraine in sensitive individuals; avoid after early afternoon for sleep"
+    }
   }
 ]
