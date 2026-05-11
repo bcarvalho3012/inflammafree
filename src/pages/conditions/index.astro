@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import ConditionPill from '../../components/ConditionPill.astro';
+
+const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<Base title="Conditions" description="Inflammatory conditions covered by InflammaFree.">
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <header class="max-w-3xl">
+      <p class="text-sm uppercase tracking-wide text-sage-600">Browse by condition</p>
+      <h1 class="mt-2 text-4xl md:text-5xl font-serif">Conditions</h1>
+      <p class="mt-4 text-lg text-slate-600 leading-relaxed">
+        Each condition page covers the inflammatory pathways involved, the top foods with evidence for that condition, dietary patterns that help, and triggers to avoid.
+      </p>
+    </header>
+
+    <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {conditions.map((c) => (
+        <ConditionPill slug={c.data.slug} shortDescription={c.data.shortDescription} featured={c.data.featured} />
+      ))}
+    </div>
+  </section>
+</Base>
