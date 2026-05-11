@@ -30,4 +30,19 @@ const standalone = defineCollection({
   }),
 });
 
-export const collections = { conditions, standalone };
+const mealPlan = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/mealPlan' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    meals: z.array(z.object({
+      slot: z.enum(['breakfast', 'snack-1', 'lunch', 'snack-2', 'dinner']),
+      slotLabel: z.string(),
+      name: z.string(),
+      whyItHelps: z.string(),
+      keyFoods: z.array(z.string()),
+    })).length(5),
+  }),
+});
+
+export const collections = { conditions, standalone, mealPlan };
