@@ -124,5 +124,261 @@
       "bioavailability": "Pair with vegetables to absorb fat-soluble compounds",
       "cautions": "Quality varies significantly — choose first cold-pressed, dark-glass-bottled brands"
     }
+  },
+  {
+    "id": "tart-cherries",
+    "name": "Tart Cherries",
+    "category": "fruit",
+    "description": "Sour Montmorency cherries with high anthocyanin content; well-studied for exercise-related inflammation, gout, and sleep-related neurological benefit.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins",
+        "mechanism": "Inhibit COX-1 and COX-2 enzymes; reduce CRP and uric acid"
+      },
+      {
+        "name": "Melatonin",
+        "mechanism": "Endogenous antioxidant; supports circadian-driven inflammation resolution"
+      }
+    ],
+    "conditions": ["arthritis", "pain", "neurological", "cardiovascular"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Fresh, frozen, or unsweetened tart cherry juice concentrate",
+      "dosage": "1 oz concentrate (or 1 cup whole cherries) once or twice daily",
+      "bioavailability": "Anthocyanins are heat-sensitive; concentrate retains them better than baked goods",
+      "cautions": "Juice is high in natural sugars; whole fruit is preferable for diabetics"
+    }
+  },
+  {
+    "id": "pomegranate",
+    "name": "Pomegranate",
+    "category": "fruit",
+    "description": "Ruby-seeded fruit with one of the highest polyphenol concentrations of any food; arils and juice both reduce vascular and joint inflammation.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Punicalagins",
+        "mechanism": "Potent antioxidants; downregulate NF-κB and MMP-13 in cartilage"
+      },
+      {
+        "name": "Urolithins",
+        "mechanism": "Gut microbial metabolites of ellagitannins; enhance mitophagy and reduce systemic inflammation"
+      }
+    ],
+    "conditions": ["cardiovascular", "arthritis", "gut"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat arils whole or drink 100% juice without added sugar",
+      "dosage": "1/2 cup arils or 4-8 oz juice daily",
+      "bioavailability": "Urolithin production depends on gut microbiome — effects vary between individuals",
+      "cautions": "Juice can interact with statins and blood pressure medications via CYP3A4"
+    }
+  },
+  {
+    "id": "strawberries",
+    "name": "Strawberries",
+    "category": "fruit",
+    "description": "Red berries with a high vitamin C and anthocyanin profile; consistent evidence for lowering CRP and improving vascular function.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins (pelargonidin)",
+        "mechanism": "Reduce oxidized LDL and CRP; improve endothelial function"
+      },
+      {
+        "name": "Vitamin C",
+        "mechanism": "Cofactor for collagen synthesis and antioxidant recycling"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Fresh or frozen — frozen is picked ripe and retains nutrients well",
+      "dosage": "1 cup daily",
+      "bioavailability": "Vitamin C is heat- and light-sensitive; eat raw when possible",
+      "cautions": "One of the higher-pesticide-residue conventional crops; choose organic when feasible"
+    }
+  },
+  {
+    "id": "raspberries",
+    "name": "Raspberries",
+    "category": "fruit",
+    "description": "Bramble fruit rich in ellagitannins, a precursor to gut-derived urolithins with systemic anti-inflammatory effects.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Ellagitannins",
+        "mechanism": "Gut microbiota convert these to urolithins, which reduce inflammation and improve mitochondrial function"
+      },
+      {
+        "name": "Anthocyanins",
+        "mechanism": "Antioxidant; protect endothelium and neural tissue"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Fresh or frozen; pair with full-fat yogurt or seeds",
+      "dosage": "1 cup daily",
+      "bioavailability": "Freezing actually breaks cell walls and may improve compound release",
+      "cautions": "Tiny seeds may be irritating in active diverticulitis"
+    }
+  },
+  {
+    "id": "blackberries",
+    "name": "Blackberries",
+    "category": "fruit",
+    "description": "Dark-pigmented bramble fruit with one of the highest anthocyanin and ellagic acid contents among berries.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins (cyanidin)",
+        "mechanism": "Reduce CRP and IL-6; protect endothelial cells"
+      },
+      {
+        "name": "Ellagic acid",
+        "mechanism": "Antioxidant; modulates NF-κB pathway"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Fresh or frozen; minimal processing preserves anthocyanins",
+      "dosage": "1 cup daily",
+      "bioavailability": "Color intensity correlates with anthocyanin content — choose deeply pigmented berries",
+      "cautions": "No common interactions"
+    }
+  },
+  {
+    "id": "oranges",
+    "name": "Oranges",
+    "category": "fruit",
+    "description": "Citrus fruit notable for vitamin C and the flavonoid hesperidin, which support vascular health and immune-mediated inflammation.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Vitamin C",
+        "mechanism": "Antioxidant; cofactor in collagen synthesis and immune regulation"
+      },
+      {
+        "name": "Hesperidin",
+        "mechanism": "Flavonoid that reduces capillary fragility and lowers CRP"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin", "autoimmune"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat whole rather than juiced — fiber blunts glycemic response",
+      "dosage": "1 medium orange daily",
+      "bioavailability": "Hesperidin concentrates in the white pith — eat with some pith intact",
+      "cautions": "Citrus can trigger GERD; high acid may erode enamel if juiced"
+    }
+  },
+  {
+    "id": "pineapple",
+    "name": "Pineapple",
+    "category": "fruit",
+    "description": "Tropical fruit and the dietary source of bromelain, a proteolytic enzyme with documented anti-inflammatory and analgesic effects.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Bromelain",
+        "mechanism": "Proteolytic enzyme that reduces edema, modulates cytokines, and aids protein digestion"
+      }
+    ],
+    "conditions": ["arthritis", "pain", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat fresh — bromelain is destroyed by canning and prolonged heat",
+      "dosage": "1 cup fresh pineapple daily, or supplement 200-500 mg bromelain",
+      "bioavailability": "Bromelain is most concentrated in the core; consume on empty stomach for systemic anti-inflammatory effect",
+      "cautions": "May increase bleeding risk with anticoagulants; can cause oral irritation"
+    }
+  },
+  {
+    "id": "papaya",
+    "name": "Papaya",
+    "category": "fruit",
+    "description": "Tropical fruit containing the proteolytic enzyme papain along with carotenoids that support digestion and skin health.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Papain",
+        "mechanism": "Proteolytic enzyme that aids protein digestion and reduces gut inflammation"
+      },
+      {
+        "name": "Lycopene",
+        "mechanism": "Carotenoid antioxidant; protects skin and vasculature from oxidative stress"
+      }
+    ],
+    "conditions": ["gut", "skin", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat ripe; squeeze lime to enhance flavor and vitamin C synergy",
+      "dosage": "1 cup cubed daily",
+      "bioavailability": "Papain is most active in unripe (green) papaya",
+      "cautions": "Avoid unripe papaya in pregnancy due to latex content; latex allergy cross-reactivity"
+    }
+  },
+  {
+    "id": "kiwi",
+    "name": "Kiwi",
+    "category": "fruit",
+    "description": "Small green fruit with exceptional vitamin C density and the digestive enzyme actinidin; supports gut motility and antioxidant status.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Vitamin C",
+        "mechanism": "Antioxidant; supports collagen synthesis and immune regulation"
+      },
+      {
+        "name": "Polyphenols and actinidin",
+        "mechanism": "Aid protein digestion and reduce intestinal inflammation"
+      }
+    ],
+    "conditions": ["gut", "cardiovascular", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat with skin (well-washed) for additional fiber and polyphenols",
+      "dosage": "2 kiwis daily — clinically studied for constipation relief",
+      "bioavailability": "Vitamin C is best preserved when eaten raw and unprocessed",
+      "cautions": "Cross-reactivity with latex and birch pollen allergies"
+    }
+  },
+  {
+    "id": "apples",
+    "name": "Apples",
+    "category": "fruit",
+    "description": "Common pome fruit notable for quercetin in the skin and pectin fiber that feeds beneficial gut bacteria.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Quercetin",
+        "mechanism": "Flavonoid that stabilizes mast cells and inhibits NF-κB-driven cytokine release"
+      },
+      {
+        "name": "Pectin",
+        "mechanism": "Soluble fiber fermented to short-chain fatty acids that reduce gut and systemic inflammation"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat with skin — quercetin is concentrated there",
+      "dosage": "1 medium apple daily",
+      "bioavailability": "Pair with nut butter to slow glycemic response",
+      "cautions": "Conventional apples carry high pesticide residues; choose organic when feasible"
+    }
   }
 ]
