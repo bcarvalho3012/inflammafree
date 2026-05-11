@@ -27,7 +27,12 @@ const foodsForCondition = sortFoods(
   allFoods.filter((f) => f.conditions.includes(data.slug)),
   'score',
 );
-const topFoods = foodsForCondition.slice(0, 12);
+// Show up to 12 top foods, rounded down to an even count so the 2-col
+// grid always fills both columns on the last row. Any hidden foods are
+// reachable via the "See all" link.
+const cap = Math.min(foodsForCondition.length, 12);
+const topFoodsCount = cap % 2 === 0 ? cap : cap - 1;
+const topFoods = foodsForCondition.slice(0, topFoodsCount);
 ---
 
 <Base title={data.name} description={data.shortDescription}>
@@ -53,7 +58,7 @@ const topFoods = foodsForCondition.slice(0, 12);
   <section class="mx-auto max-w-3xl px-6 py-8">
     <div class="flex items-baseline justify-between mb-6 flex-wrap gap-2">
       <h2 class="text-3xl font-serif">Top foods for {data.name.toLowerCase()}</h2>
-      {foodsForCondition.length > 12 && (
+      {foodsForCondition.length > topFoodsCount && (
         <a href={`${base}/foods?condition=${data.slug}`} class="text-sm text-sage-800 hover:underline">
           See all {foodsForCondition.length} →
         </a>
