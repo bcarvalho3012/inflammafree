@@ -1284,5 +1284,109 @@
       "bioavailability": "Beta-glucan is preserved through cooking; soaking shortens cook time",
       "cautions": "Contains gluten — not suitable for celiac or gluten-sensitive individuals"
     }
+  },
+  {
+    "id": "avocado",
+    "name": "Avocado",
+    "category": "fat-oil",
+    "description": "Tree fruit eaten as a fat source; the dominant source of monounsaturated oleic acid in produce, with carotenoids and fiber adding to its anti-inflammatory profile.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Oleic acid",
+        "mechanism": "Monounsaturated fat that reduces oxidized LDL and dampens inflammatory gene expression"
+      },
+      {
+        "name": "Lutein",
+        "mechanism": "Carotenoid antioxidant protecting retinal and neural tissue"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat ripe and raw; spread on toast, slice into salads, or blend into smoothies",
+      "dosage": "1/2 to 1 avocado daily",
+      "bioavailability": "Adding avocado to a salad increases absorption of carotenoids from other vegetables by 2-15x",
+      "cautions": "Latex-fruit cross-reactivity; high potassium for advanced kidney disease"
+    }
+  },
+  {
+    "id": "flaxseed-oil",
+    "name": "Flaxseed Oil",
+    "category": "fat-oil",
+    "description": "Cold-pressed oil from flax seeds; one of the richest plant sources of ALA omega-3 fatty acid.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Alpha-linolenic acid (ALA)",
+        "mechanism": "Plant omega-3; partially converts to EPA/DHA and shifts eicosanoid balance"
+      },
+      {
+        "name": "Lignans",
+        "mechanism": "Phytoestrogens with anti-inflammatory and hormonal balancing effects"
+      }
+    ],
+    "conditions": ["cardiovascular", "autoimmune", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use cold — drizzle on salads, finished dishes, or blend into smoothies; never heat",
+      "dosage": "1 tablespoon daily",
+      "bioavailability": "Conversion of ALA to EPA/DHA is limited (~5-10%); pair with marine omega-3 for fuller effect",
+      "cautions": "Highly oxidation-prone; store refrigerated in dark glass and use within weeks of opening"
+    }
+  },
+  {
+    "id": "walnut-oil",
+    "name": "Walnut Oil",
+    "category": "fat-oil",
+    "description": "Cold-pressed oil from walnuts; supplies ALA omega-3 with the polyphenol profile of walnuts in a more concentrated form.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Alpha-linolenic acid (ALA)",
+        "mechanism": "Plant omega-3; supports vascular and neural inflammation resolution"
+      },
+      {
+        "name": "Walnut polyphenols",
+        "mechanism": "Ellagitannins and their gut metabolites (urolithins) reduce systemic inflammation"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use unheated in salad dressings or drizzled on finished dishes",
+      "dosage": "1-2 teaspoons daily",
+      "bioavailability": "Heat destroys ALA and walnut polyphenols; never use for cooking",
+      "cautions": "Oxidizes quickly; refrigerate and discard if it smells bitter or paint-like"
+    }
+  },
+  {
+    "id": "coconut-oil",
+    "name": "Coconut Oil",
+    "category": "fat-oil",
+    "description": "Tropical saturated fat dominated by medium-chain fatty acids; evidence is mixed and effects vary by individual lipid response.",
+    "antiInflammatoryScore": 5,
+    "activeCompounds": [
+      {
+        "name": "Medium-chain triglycerides (MCTs)",
+        "mechanism": "Rapidly absorbed and used as energy; may support ketone production for neurological function"
+      },
+      {
+        "name": "Lauric acid",
+        "mechanism": "Antimicrobial against some gut pathogens; effects on cardiovascular markers are mixed"
+      }
+    ],
+    "conditions": ["gut", "neurological"],
+    "evidenceStrength": "emerging",
+    "citations": null,
+    "tips": {
+      "preparation": "Use for medium-heat cooking; topical use can support skin barrier",
+      "dosage": "1-2 tablespoons daily, treated as a fat source not a daily must-have",
+      "bioavailability": "Virgin (unrefined) preserves polyphenols; refined has higher smoke point",
+      "cautions": "Raises LDL cholesterol in many individuals; use as part of a varied fat profile rather than as the dominant fat"
+    }
   }
 ]
