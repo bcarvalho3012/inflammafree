@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import FoodCard from '../components/FoodCard.astro';
 import ConditionPill from '../components/ConditionPill.astro';
+import Leaf from '../components/decorative/Leaf.astro';
 import { allFoods } from '../lib/foods';
 import { sortFoods } from '../lib/filter';
 
@@ -15,6 +16,8 @@ const conditions = (await getCollection('conditions')).sort((a, b) => a.data.ord
   <!-- Hero -->
   <section class="relative overflow-hidden">
     <div class="absolute inset-0 bg-gradient-to-b from-cream-50 via-cream-50 to-sage-400/10 -z-10"></div>
+    <Leaf className="hidden md:block absolute right-8 top-12 w-24 text-sage-400/30 -z-10" />
+    <Leaf className="hidden md:block absolute left-12 bottom-8 w-16 text-sage-400/20 -z-10 rotate-45" />
     <div class="mx-auto max-w-4xl px-6 py-24 text-center">
       <p class="text-sm uppercase tracking-wide text-sage-600">Anti-inflammatory food reference</p>
       <h1 class="mt-3 text-5xl md:text-6xl font-serif leading-tight">Food as medicine for chronic inflammation.</h1>

@@ -2,6 +2,7 @@
 import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import { buildBibliography } from '../lib/bibliography';
+import Leaf from '../components/decorative/Leaf.astro';
 
 const science = await getEntry('standalone', 'science');
 if (!science) throw new Error('science.md missing from content/standalone/');
@@ -17,6 +18,10 @@ const bibliography = buildBibliography();
 
     <div class="mt-8 prose prose-lg max-w-none">
       <Content />
+    </div>
+
+    <div class="mt-16 flex justify-center">
+      <Leaf className="w-12 text-sage-400" />
     </div>
 
     <section class="mt-16">
