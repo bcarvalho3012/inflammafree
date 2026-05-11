@@ -910,5 +910,249 @@
       "bioavailability": "A splash of vinegar in the cooking water extracts more minerals from bone",
       "cautions": "High histamine content may trigger symptoms in histamine-intolerant individuals"
     }
+  },
+  {
+    "id": "cinnamon",
+    "name": "Cinnamon",
+    "category": "spice",
+    "description": "Bark spice with documented effects on blood glucose, lipid profile, and vascular inflammation; choose Ceylon over Cassia for lower coumarin.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Cinnamaldehyde",
+        "mechanism": "Improves insulin signaling; reduces postprandial inflammation and CRP"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Add to oatmeal, coffee, yogurt, or roasted vegetables",
+      "dosage": "1/2 to 1 teaspoon daily",
+      "bioavailability": "Ceylon ('true') cinnamon is preferred for daily use; Cassia is much higher in coumarin",
+      "cautions": "Cassia cinnamon at high doses may stress the liver; can interact with diabetes medications"
+    }
+  },
+  {
+    "id": "cayenne",
+    "name": "Cayenne",
+    "category": "spice",
+    "description": "Ground hot chili pepper containing capsaicin, which acts on TRPV1 receptors to reduce pain signaling over time.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Capsaicin",
+        "mechanism": "TRPV1 agonist; depletes substance P from sensory neurons, reducing nociceptive signaling"
+      }
+    ],
+    "conditions": ["pain", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Sprinkle on soups, eggs, and roasted vegetables",
+      "dosage": "1/4 to 1/2 teaspoon daily",
+      "bioavailability": "Topical capsaicin creams (0.025-0.075%) are effective for localized arthritis and neuropathy pain",
+      "cautions": "Can aggravate GERD, ulcers, and hemorrhoids; topical use can cause burning"
+    }
+  },
+  {
+    "id": "black-pepper",
+    "name": "Black Pepper",
+    "category": "spice",
+    "description": "Common kitchen spice whose alkaloid piperine dramatically enhances absorption of curcumin and other polyphenols.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Piperine",
+        "mechanism": "Inhibits glucuronidation in the liver, increasing systemic availability of other compounds"
+      }
+    ],
+    "conditions": ["gut", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use freshly cracked; pre-ground loses volatile oils quickly",
+      "dosage": "1/4 teaspoon with turmeric-containing meals",
+      "bioavailability": "Even a small pinch with curcumin boosts curcumin absorption by up to 2000%",
+      "cautions": "Piperine alters drug metabolism — may affect levels of medications cleared by glucuronidation"
+    }
+  },
+  {
+    "id": "cloves",
+    "name": "Cloves",
+    "category": "spice",
+    "description": "Aromatic flower buds with the highest antioxidant capacity of common spices; eugenol provides analgesic and antimicrobial effects.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Eugenol",
+        "mechanism": "Inhibits COX-2 and 5-LOX; topical analgesic and antimicrobial"
+      }
+    ],
+    "conditions": ["arthritis", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use whole in stews, mulled drinks, or ground in baking",
+      "dosage": "1/4 teaspoon ground daily",
+      "bioavailability": "Eugenol is volatile — store cloves whole and grind just before use",
+      "cautions": "Concentrated clove oil can irritate mucosa; can interact with anticoagulants"
+    }
+  },
+  {
+    "id": "rosemary",
+    "name": "Rosemary",
+    "category": "spice",
+    "description": "Mediterranean herb containing carnosic acid and rosmarinic acid with documented neuroprotective and anti-inflammatory effects.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Carnosic acid",
+        "mechanism": "Activates Nrf2 pathway; protects neurons from oxidative damage"
+      },
+      {
+        "name": "Rosmarinic acid",
+        "mechanism": "Inhibits COX-2 and lipoxygenase; reduces complement activation"
+      }
+    ],
+    "conditions": ["neurological", "arthritis"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use fresh or dried in roasts, marinades, and infused oils",
+      "dosage": "1 teaspoon dried daily, or several fresh sprigs",
+      "bioavailability": "Marinating meats with rosemary before high-heat cooking reduces formation of inflammatory carcinogens",
+      "cautions": "High doses may interact with anticoagulants and lithium"
+    }
+  },
+  {
+    "id": "oregano",
+    "name": "Oregano",
+    "category": "spice",
+    "description": "Mediterranean herb with one of the highest phenolic contents among culinary herbs; carvacrol and thymol offer antimicrobial and anti-inflammatory action.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Carvacrol",
+        "mechanism": "Inhibits NF-κB; broad antimicrobial activity against gut pathogens"
+      },
+      {
+        "name": "Thymol",
+        "mechanism": "Antimicrobial; reduces oxidative stress"
+      }
+    ],
+    "conditions": ["gut", "autoimmune"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Sprinkle dried oregano on pizza, pasta, and roasted vegetables",
+      "dosage": "1 teaspoon dried daily, or oil of oregano supplement when targeted",
+      "bioavailability": "Oil of oregano is concentrated — use with food for short courses, not daily long-term",
+      "cautions": "Concentrated oil can irritate mucosa and may disrupt beneficial gut bacteria with prolonged use"
+    }
+  },
+  {
+    "id": "thyme",
+    "name": "Thyme",
+    "category": "spice",
+    "description": "Mediterranean herb rich in thymol and rosmarinic acid; supports respiratory health, gut microbial balance, and skin.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Thymol",
+        "mechanism": "Antimicrobial; reduces oxidative stress in epithelial tissues"
+      },
+      {
+        "name": "Rosmarinic acid",
+        "mechanism": "Inhibits COX-2 and reduces inflammatory cytokines"
+      }
+    ],
+    "conditions": ["gut", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Add fresh or dried to soups, stews, and roasts",
+      "dosage": "1 teaspoon dried daily",
+      "bioavailability": "Volatile oils are best preserved by adding thyme late in cooking",
+      "cautions": "Concentrated essential oil should not be ingested undiluted"
+    }
+  },
+  {
+    "id": "sage",
+    "name": "Sage",
+    "category": "spice",
+    "description": "Mediterranean herb with traditional use for cognitive support; rosmarinic acid and carnosol provide neuroprotective effects.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Rosmarinic acid",
+        "mechanism": "Inhibits acetylcholinesterase and reduces neuroinflammation"
+      },
+      {
+        "name": "Carnosol",
+        "mechanism": "Activates Nrf2 antioxidant pathway"
+      }
+    ],
+    "conditions": ["neurological", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use fresh in butter sauces, or dried in stuffings and meat rubs",
+      "dosage": "1 teaspoon dried daily, or fresh leaves brewed as tea",
+      "bioavailability": "Sage tea (1 cup, 2x daily) has been studied for cognitive support",
+      "cautions": "Avoid high-dose sage essential oil — thujone content can be neurotoxic; avoid in pregnancy"
+    }
+  },
+  {
+    "id": "basil",
+    "name": "Basil",
+    "category": "spice",
+    "description": "Aromatic herb used culinarily and medicinally; sweet basil and holy basil both supply eugenol and ursolic acid with adaptogenic and anti-inflammatory effects.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Eugenol",
+        "mechanism": "Inhibits COX-2 and reduces inflammatory eicosanoids"
+      },
+      {
+        "name": "Ursolic acid",
+        "mechanism": "Reduces NF-κB activation; supports glucose and lipid metabolism"
+      }
+    ],
+    "conditions": ["neurological", "autoimmune"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Add fresh basil at the end of cooking; holy basil (tulsi) is commonly drunk as tea",
+      "dosage": "Several fresh leaves daily, or 1-2 cups tulsi tea",
+      "bioavailability": "Volatile compounds are heat-sensitive; tear rather than chop to preserve them",
+      "cautions": "Holy basil may lower blood sugar and interact with diabetes medications"
+    }
+  },
+  {
+    "id": "parsley",
+    "name": "Parsley",
+    "category": "spice",
+    "description": "Common herb that doubles as a vegetable in larger amounts; particularly rich in apigenin, vitamin K, and vitamin C.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Apigenin",
+        "mechanism": "Flavonoid that downregulates NF-κB and reduces inflammatory cytokines"
+      },
+      {
+        "name": "Vitamin K",
+        "mechanism": "Supports calcium metabolism and reduces vascular calcification"
+      }
+    ],
+    "conditions": ["cardiovascular", "autoimmune"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Use generously as a salad green (tabbouleh) or as a garnish for vibrant color",
+      "dosage": "1/4 to 1/2 cup fresh leaves daily",
+      "bioavailability": "Italian (flat-leaf) parsley has stronger flavor and slightly higher phenolic content than curly",
+      "cautions": "High vitamin K may interfere with warfarin dosing"
+    }
   }
 ]
