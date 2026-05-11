@@ -1518,5 +1518,153 @@
       "bioavailability": "Light roasts retain more chlorogenic acid; dark roasts have a slightly different antioxidant profile",
       "cautions": "Can trigger anxiety, palpitations, GERD, or migraine in sensitive individuals; avoid after early afternoon for sleep"
     }
+  },
+  {
+    "id": "kefir",
+    "name": "Kefir",
+    "category": "fermented",
+    "description": "Fermented milk drink with one of the most diverse probiotic profiles available; supplies dozens of bacterial and yeast species that support gut and immune health.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Diverse probiotic strains",
+        "mechanism": "Multiple Lactobacillus and yeast species colonize the gut, produce short-chain fatty acids, and modulate immune signaling"
+      }
+    ],
+    "conditions": ["gut", "autoimmune", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Drink plain or blend with berries; goat or sheep kefir for sensitive individuals",
+      "dosage": "1/2 to 1 cup daily",
+      "bioavailability": "Fermentation breaks down most lactose — many lactose-intolerant people tolerate kefir well",
+      "cautions": "Dairy kefir not suitable for milk-protein allergy; water and coconut kefir are alternatives"
+    }
+  },
+  {
+    "id": "yogurt",
+    "name": "Yogurt with Live Cultures",
+    "category": "fermented",
+    "description": "Fermented dairy supplying live Lactobacillus and Bifidobacterium cultures; choose plain unsweetened varieties to avoid added sugars that offset benefits.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Lactobacillus and Bifidobacterium",
+        "mechanism": "Support gut barrier integrity and modulate systemic inflammation through short-chain fatty acid production"
+      }
+    ],
+    "conditions": ["gut", "autoimmune", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Choose plain, unsweetened, with 'live and active cultures' on the label",
+      "dosage": "3/4 to 1 cup daily",
+      "bioavailability": "Greek and Icelandic styles are strained — more protein but fewer probiotics per ounce",
+      "cautions": "Flavored varieties often have as much added sugar as soda; check labels carefully"
+    }
+  },
+  {
+    "id": "kimchi",
+    "name": "Kimchi",
+    "category": "fermented",
+    "description": "Korean fermented vegetable preparation combining Lactobacillus species with the polyphenols of cabbage, radish, garlic, and ginger.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Diverse Lactobacillus species",
+        "mechanism": "Probiotic strains that support gut barrier function and modulate immunity"
+      },
+      {
+        "name": "Cruciferous plant compounds",
+        "mechanism": "Isothiocyanates and capsaicinoids from cabbage, garlic, and chili provide additive anti-inflammatory effects"
+      }
+    ],
+    "conditions": ["gut", "autoimmune", "cardiovascular"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat as a side dish; refrigerated unpasteurized varieties contain live cultures",
+      "dosage": "2-4 tablespoons daily",
+      "bioavailability": "Heat (cooking into stews) kills probiotics but preserves polyphenols — vary preparation",
+      "cautions": "High sodium; histamine content can trigger symptoms in sensitive individuals"
+    }
+  },
+  {
+    "id": "sauerkraut",
+    "name": "Raw Sauerkraut",
+    "category": "fermented",
+    "description": "Lacto-fermented cabbage that pairs probiotic Lactobacillus species with the isothiocyanate compounds of cruciferous vegetables.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Lactobacillus",
+        "mechanism": "Probiotics that support gut barrier and immune regulation"
+      },
+      {
+        "name": "Isothiocyanates",
+        "mechanism": "Cabbage-derived compounds that activate Nrf2 antioxidant pathway"
+      }
+    ],
+    "conditions": ["gut", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Choose refrigerated, unpasteurized brands — shelf-stable canned sauerkraut has no live cultures",
+      "dosage": "2-4 tablespoons daily",
+      "bioavailability": "Eat raw or cold; heating above ~115°F destroys the probiotic cultures",
+      "cautions": "High sodium; histamine content"
+    }
+  },
+  {
+    "id": "miso",
+    "name": "Miso",
+    "category": "fermented",
+    "description": "Japanese fermented soybean paste; the long fermentation produces bioactive peptides and isoflavone metabolites with cardiovascular and gut benefit.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Fermentation-derived peptides",
+        "mechanism": "Bioactive peptides with mild ACE-inhibitor and antioxidant activity"
+      },
+      {
+        "name": "Isoflavones",
+        "mechanism": "Phytoestrogens with anti-inflammatory and cardiovascular effects"
+      }
+    ],
+    "conditions": ["gut", "cardiovascular"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Stir into warm (not boiling) broth at the end of cooking to preserve cultures",
+      "dosage": "1-2 tablespoons daily",
+      "bioavailability": "Boiling kills the probiotic cultures; add miso off the heat",
+      "cautions": "High sodium; choose non-GMO organic soybean miso when possible"
+    }
+  },
+  {
+    "id": "tempeh",
+    "name": "Tempeh",
+    "category": "fermented",
+    "description": "Indonesian fermented soybean cake; the fermentation reduces antinutrients and creates more bioavailable isoflavones than unfermented soy.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Fermented isoflavones",
+        "mechanism": "Aglycone isoflavones are more readily absorbed and exhibit anti-inflammatory effects"
+      },
+      {
+        "name": "Rhizopus probiotics",
+        "mechanism": "Fungal fermentation produces enzymes that improve protein digestibility"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Steam first to soften, then marinate and pan-sear or bake",
+      "dosage": "3-4 oz several times weekly",
+      "bioavailability": "Choose organic non-GMO; fermentation has already reduced phytic acid significantly",
+      "cautions": "Contains soy — not suitable for soy allergy"
+    }
   }
 ]
