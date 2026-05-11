@@ -18,21 +18,21 @@ const conditions = (await getCollection('conditions')).sort((a, b) => a.data.ord
     <div class="absolute inset-0 bg-gradient-to-b from-cream-50 via-cream-50 to-sage-400/10 -z-10"></div>
     <Leaf className="hidden md:block absolute right-8 top-12 w-24 text-sage-400/30 -z-10" />
     <Leaf className="hidden md:block absolute left-12 bottom-8 w-16 text-sage-400/20 -z-10 rotate-45" />
-    <div class="mx-auto max-w-4xl px-6 py-24 text-center">
+    <div class="mx-auto max-w-4xl px-6 py-16 sm:py-20 md:py-24 text-center">
       <p class="text-sm uppercase tracking-wide text-sage-600">Anti-inflammatory food reference</p>
-      <h1 class="mt-3 text-5xl md:text-6xl font-serif leading-tight">Food as medicine for chronic inflammation.</h1>
-      <p class="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+      <h1 class="mt-3 text-4xl sm:text-5xl md:text-6xl font-serif leading-tight break-words">Food as medicine for chronic inflammation.</h1>
+      <p class="mt-6 text-base sm:text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
         A research-backed guide covering migraines, arthritis, gut health, cardiovascular and other inflammatory conditions —
         with detailed mechanisms and evidence-graded coverage of {allFoods.length}+ foods.
       </p>
-      <form action={`${base}/foods`} method="get" class="mt-10 max-w-xl mx-auto flex gap-2">
+      <form action={`${base}/foods`} method="get" class="mt-10 max-w-xl mx-auto flex flex-col sm:flex-row gap-2">
         <input
           type="search"
           name="q"
           placeholder="Search foods, compounds, conditions..."
-          class="flex-1 rounded-full border border-cream-100 bg-cream-50 px-5 py-3 text-base focus:outline-none focus:ring-2 focus:ring-sage-400"
+          class="flex-1 min-w-0 rounded-full border border-cream-100 bg-cream-50 px-5 py-3 text-base focus:outline-none focus:ring-2 focus:ring-sage-400"
         />
-        <button type="submit" class="rounded-full bg-sage-600 px-6 py-3 text-cream-50 hover:bg-sage-800 hover:no-underline">
+        <button type="submit" class="rounded-full bg-sage-600 px-6 py-3 text-cream-50 hover:bg-sage-800 hover:no-underline shrink-0">
           Search
         </button>
       </form>
