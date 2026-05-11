@@ -1,10 +1,59 @@
 ---
+import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import { buildBibliography } from '../lib/bibliography';
+
+const science = await getEntry('standalone', 'science');
+if (!science) throw new Error('science.md missing from content/standalone/');
+const { Content } = await render(science);
+
+const bibliography = buildBibliography();
 ---
 
-<Base title="Science" description="Inflammation primer and bibliography.">
-  <section class="mx-auto max-w-3xl px-6 py-16">
-    <h1 class="text-4xl md:text-5xl font-serif">Science</h1>
-    <p class="mt-4 text-slate-500">Inflammation primer and full bibliography — coming in Phase 6.</p>
-  </section>
+<Base title="Science" description={science.data.description}>
+  <article class="mx-auto max-w-3xl px-6 py-16">
+    <h1 class="text-4xl md:text-5xl font-serif">{science.data.title}</h1>
+    <p class="mt-4 text-lg text-slate-600 leading-relaxed">{science.data.description}</p>
+
+    <div class="mt-8 prose prose-lg max-w-none">
+      <Content />
+    </div>
+
+    <section class="mt-16">
+      <h2 class="text-3xl font-serif">Bibliography</h2>
+      <p class="mt-2 text-sm text-slate-500">
+        Citations from the food database, grouped by condition. Sourced from PubMed at authoring time.
+      </p>
+
+      {bibliography.length === 0 ? (
+        <p class="mt-6 text-slate-500">No citations yet — verification pass is pending.</p>
+      ) : (
+        <div class="mt-8 space-y-10">
+          {bibliography.map((group) => (
+            <div>
+              <h3 class="text-xl font-serif text-navy-900">{group.conditionLabel}</h3>
+              <ol class="mt-3 space-y-2 list-decimal list-inside text-sm text-slate-600">
+                {group.entries.map(({ foodName, citation }) => (
+                  <li>
+                    <span class="text-navy-900 font-medium">{foodName}:</span>{' '}
+                    {citation.url
+                      ? <a href={citation.url} target="_blank" rel="noopener noreferrer" class="underline hover:text-sage-800">{citation.title}</a>
+                      : <span>{citation.title}</span>}
+                    <span class="text-slate-500"> — {citation.journal}, {citation.year}</span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ))}
+        </div>
+      )}
+    </section>
+
+    <section class="mt-16 rounded-xl bg-terra-400/10 border-l-4 border-terra-600 p-6">
+      <h2 class="text-xl font-serif text-navy-900">Disclaimer</h2>
+      <p class="mt-2 text-sm text-slate-600">
+        Educational content only. Not medical advice. Consult your healthcare provider before changing your diet, especially if you take medications, have an existing condition, are pregnant or nursing, or are managing a chronic illness.
+      </p>
+    </section>
+  </article>
 </Base>
