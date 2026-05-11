@@ -1666,5 +1666,209 @@
       "bioavailability": "Choose organic non-GMO; fermentation has already reduced phytic acid significantly",
       "cautions": "Contains soy — not suitable for soy allergy"
     }
+  },
+  {
+    "id": "walnuts",
+    "name": "Walnuts",
+    "category": "nut-seed",
+    "description": "Tree nut with the highest ALA omega-3 content of common nuts, plus a unique ellagitannin profile that produces gut-derived urolithins.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Alpha-linolenic acid (ALA)",
+        "mechanism": "Plant omega-3 that shifts eicosanoid balance toward less inflammatory mediators"
+      },
+      {
+        "name": "Ellagitannins (urolithin precursors)",
+        "mechanism": "Gut microbiota convert to urolithins, which reduce systemic inflammation and improve mitochondrial function"
+      }
+    ],
+    "conditions": ["cardiovascular", "neurological"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat raw or lightly toasted; the skin (pellicle) contains most of the polyphenols",
+      "dosage": "1 oz (about 14 halves) daily",
+      "bioavailability": "Store refrigerated — the high omega-3 content makes walnuts prone to rancidity",
+      "cautions": "Tree nut allergy; high oxalates may concern kidney stone formers"
+    }
+  },
+  {
+    "id": "almonds",
+    "name": "Almonds",
+    "category": "nut-seed",
+    "description": "Tree nut with the highest vitamin E content of common nuts; consistent evidence for lipid improvement and skin health.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Vitamin E (alpha-tocopherol)",
+        "mechanism": "Lipid-soluble antioxidant; protects cell membranes and supports skin barrier"
+      },
+      {
+        "name": "Magnesium",
+        "mechanism": "Cofactor in vascular and neural function; reduces inflammation markers"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat raw or dry-roasted; soaking overnight improves digestibility",
+      "dosage": "1 oz (about 23 almonds) daily",
+      "bioavailability": "Skin contains polyphenols but also phytic acid — soaking reduces antinutrients",
+      "cautions": "Tree nut allergy; in the U.S., 'raw' almonds are typically pasteurized"
+    }
+  },
+  {
+    "id": "chia-seeds",
+    "name": "Chia Seeds",
+    "category": "nut-seed",
+    "description": "Tiny seeds with one of the highest ALA omega-3 contents of any plant food and a remarkable soluble fiber content that supports gut health.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Alpha-linolenic acid (ALA)",
+        "mechanism": "Plant omega-3; supports vascular and neural inflammation resolution"
+      },
+      {
+        "name": "Soluble fiber",
+        "mechanism": "Forms a gel that slows glucose absorption and feeds gut microbiota"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Soak in liquid 10+ minutes to hydrate, or grind for better nutrient absorption",
+      "dosage": "1-2 tablespoons daily",
+      "bioavailability": "Whole seeds pass largely undigested; grinding or thorough soaking improves nutrient release",
+      "cautions": "Can cause GI obstruction if eaten dry without adequate water"
+    }
+  },
+  {
+    "id": "flaxseeds",
+    "name": "Flaxseeds",
+    "category": "nut-seed",
+    "description": "Small brown seeds that combine high ALA omega-3 content with the richest dietary source of lignans, with documented hormonal and anti-inflammatory effects.",
+    "antiInflammatoryScore": 8,
+    "activeCompounds": [
+      {
+        "name": "Alpha-linolenic acid (ALA)",
+        "mechanism": "Plant omega-3 that competes with arachidonic acid and reduces inflammatory eicosanoids"
+      },
+      {
+        "name": "Lignans",
+        "mechanism": "Phytoestrogens with anti-inflammatory effects and modulation of hormone-driven inflammation"
+      }
+    ],
+    "conditions": ["cardiovascular", "autoimmune"],
+    "evidenceStrength": "strong",
+    "citations": null,
+    "tips": {
+      "preparation": "Grind fresh before use — whole flaxseeds pass through undigested",
+      "dosage": "1-2 tablespoons ground daily",
+      "bioavailability": "Grind in small batches and refrigerate; ground flax becomes rancid within weeks",
+      "cautions": "Lignans have estrogenic activity — consult provider in hormone-sensitive cancers"
+    }
+  },
+  {
+    "id": "hemp-seeds",
+    "name": "Hemp Seeds",
+    "category": "nut-seed",
+    "description": "Soft seeds with a balanced omega-3 to omega-6 ratio (~1:3, ideal among plant fats) and complete plant protein.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Balanced omega-3/omega-6 fats",
+        "mechanism": "Ratio favors anti-inflammatory eicosanoid production over pro-inflammatory ones"
+      },
+      {
+        "name": "Complete protein and gamma-linolenic acid (GLA)",
+        "mechanism": "Supplies all essential amino acids; GLA is a precursor to anti-inflammatory eicosanoids"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Sprinkle on salads, yogurt, or smoothies; no preparation required",
+      "dosage": "2-3 tablespoons daily",
+      "bioavailability": "Soft hulls digest easily; no grinding needed unlike flax",
+      "cautions": "Generally well-tolerated; no THC content in food-grade hemp seeds"
+    }
+  },
+  {
+    "id": "pumpkin-seeds",
+    "name": "Pumpkin Seeds",
+    "category": "nut-seed",
+    "description": "Green-shelled seeds (pepitas) particularly rich in magnesium, zinc, and tryptophan — a profile relevant to migraine and neurological symptoms.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Magnesium",
+        "mechanism": "Vascular and neural stabilizer; reduces migraine susceptibility"
+      },
+      {
+        "name": "Zinc",
+        "mechanism": "Cofactor in immune regulation and skin integrity"
+      }
+    ],
+    "conditions": ["migraine", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat raw or lightly toasted; sprinkle on salads, soups, or oatmeal",
+      "dosage": "1 oz (about 1/4 cup) daily",
+      "bioavailability": "Soaking overnight reduces phytic acid and improves mineral absorption",
+      "cautions": "Generally well-tolerated; rare allergy"
+    }
+  },
+  {
+    "id": "brazil-nuts",
+    "name": "Brazil Nuts",
+    "category": "nut-seed",
+    "description": "Large tree nut with the highest selenium content of any food; one or two nuts daily meet the full requirement for this essential trace mineral.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Selenium",
+        "mechanism": "Cofactor for glutathione peroxidase, the body's primary antioxidant defense enzyme; supports thyroid function"
+      }
+    ],
+    "conditions": ["autoimmune", "neurological"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Eat raw, just 1-2 nuts daily",
+      "dosage": "1-2 nuts daily — more is not better and can cause toxicity",
+      "bioavailability": "Selenium content varies dramatically by soil; one nut can range from 50-200 mcg",
+      "cautions": "Selenium toxicity (selenosis) at sustained high intake: hair loss, brittle nails, GI symptoms. Keep to 1-2 nuts daily."
+    }
+  },
+  {
+    "id": "sesame-seeds",
+    "name": "Sesame Seeds",
+    "category": "nut-seed",
+    "description": "Small seeds rich in sesame-specific lignans (sesamin, sesamolin) and the antioxidant tocopherol with cardiovascular and joint benefits.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Sesamin",
+        "mechanism": "Lignan that reduces oxidized LDL and inhibits inflammatory cytokine release"
+      },
+      {
+        "name": "Sesame lignans (broadly)",
+        "mechanism": "Enhance vitamin E activity and provide additional antioxidant capacity"
+      }
+    ],
+    "conditions": ["cardiovascular", "arthritis"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Toast briefly to enhance flavor, or use as tahini paste",
+      "dosage": "1-2 tablespoons daily, or 1-2 tablespoons tahini",
+      "bioavailability": "Grinding (as in tahini) or thorough chewing dramatically improves nutrient extraction from the hard hull",
+      "cautions": "Sesame is one of the major food allergens; check labels"
+    }
   }
 ]
