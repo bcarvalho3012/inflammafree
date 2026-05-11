@@ -1870,5 +1870,135 @@
       "bioavailability": "Grinding (as in tahini) or thorough chewing dramatically improves nutrient extraction from the hard hull",
       "cautions": "Sesame is one of the major food allergens; check labels"
     }
+  },
+  {
+    "id": "lentils",
+    "name": "Lentils",
+    "category": "legume",
+    "description": "Small lens-shaped legume rich in soluble fiber, folate, and magnesium; a Blue Zones staple linked to longevity and metabolic health.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Soluble fiber",
+        "mechanism": "Fermented to short-chain fatty acids that nourish gut epithelium and reduce systemic inflammation"
+      },
+      {
+        "name": "Folate",
+        "mechanism": "Lowers homocysteine, a vascular inflammation marker"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "No soaking required for most varieties; simmer 20-30 minutes",
+      "dosage": "1/2 to 1 cup cooked daily",
+      "bioavailability": "Pair with vitamin C foods to enhance non-heme iron absorption",
+      "cautions": "Can cause gas — start with small portions and build tolerance"
+    }
+  },
+  {
+    "id": "chickpeas",
+    "name": "Chickpeas",
+    "category": "legume",
+    "description": "Versatile legume high in fiber, folate, and manganese; the basis of hummus and a Mediterranean diet staple.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Soluble fiber",
+        "mechanism": "Feeds beneficial gut bacteria and produces anti-inflammatory short-chain fatty acids"
+      },
+      {
+        "name": "Manganese",
+        "mechanism": "Cofactor for superoxide dismutase, a primary antioxidant enzyme"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Soak dried overnight then simmer 1-1.5 hours; canned (rinsed) is convenient",
+      "dosage": "1/2 to 1 cup cooked daily",
+      "bioavailability": "Sprouting or soaking before cooking reduces phytic acid and improves mineral absorption",
+      "cautions": "Can cause gas; high FODMAP for sensitive individuals"
+    }
+  },
+  {
+    "id": "black-beans",
+    "name": "Black Beans",
+    "category": "legume",
+    "description": "Dark-pigmented legume that combines the fiber profile of beans with anthocyanin antioxidants from the dark seed coat.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Anthocyanins",
+        "mechanism": "Reduce CRP and oxidative stress; protect endothelial cells"
+      },
+      {
+        "name": "Soluble fiber",
+        "mechanism": "Feeds gut microbiota and produces anti-inflammatory short-chain fatty acids"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Soak overnight, then simmer 1-1.5 hours; pressure-cook for faster results",
+      "dosage": "1/2 to 1 cup cooked daily",
+      "bioavailability": "The dark seed coat carries most of the antioxidants — don't peel",
+      "cautions": "Can cause gas; soak with epazome or kombu to reduce flatulence"
+    }
+  },
+  {
+    "id": "kidney-beans",
+    "name": "Kidney Beans",
+    "category": "legume",
+    "description": "Large red legume rich in fiber, magnesium, and folate; consistent evidence for improved glycemic control and cardiovascular markers.",
+    "antiInflammatoryScore": 6,
+    "activeCompounds": [
+      {
+        "name": "Soluble fiber",
+        "mechanism": "Slows glucose absorption and feeds beneficial gut microbiota"
+      },
+      {
+        "name": "Magnesium",
+        "mechanism": "Cofactor in vascular and neural function; reduces inflammation markers"
+      }
+    ],
+    "conditions": ["cardiovascular", "gut"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Soak overnight, then boil vigorously for at least 10 minutes before simmering",
+      "dosage": "1/2 to 1 cup cooked daily",
+      "bioavailability": "Soaking and discarding the water reduces phytic acid and antinutrients",
+      "cautions": "Raw or undercooked kidney beans contain phytohaemagglutinin (a lectin) and can cause severe GI symptoms — boil vigorously"
+    }
+  },
+  {
+    "id": "edamame",
+    "name": "Edamame",
+    "category": "legume",
+    "description": "Young green soybeans eaten whole; supply complete plant protein along with isoflavones that support cardiovascular and skin health.",
+    "antiInflammatoryScore": 7,
+    "activeCompounds": [
+      {
+        "name": "Isoflavones (genistein, daidzein)",
+        "mechanism": "Phytoestrogens that reduce vascular inflammation and improve endothelial function"
+      },
+      {
+        "name": "Complete plant protein",
+        "mechanism": "Supplies all essential amino acids supporting tissue repair"
+      }
+    ],
+    "conditions": ["cardiovascular", "skin"],
+    "evidenceStrength": "moderate",
+    "citations": null,
+    "tips": {
+      "preparation": "Steam or boil in pods 4-5 minutes; sprinkle with sea salt and pop the beans out",
+      "dosage": "1/2 to 1 cup shelled beans daily",
+      "bioavailability": "Choose organic non-GMO; whole-food soy is preferable to isolated soy protein",
+      "cautions": "Soy allergy; people with hormone-sensitive conditions should consult their provider"
+    }
   }
 ]
