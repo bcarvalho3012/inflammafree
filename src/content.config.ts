@@ -22,4 +22,12 @@ const conditions = defineCollection({
   }),
 });
 
-export const collections = { conditions };
+const standalone = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/standalone' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { conditions, standalone };
