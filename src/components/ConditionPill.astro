@@ -1,0 +1,21 @@
+---
+import { CONDITION_LABELS } from '../lib/types';
+import type { ConditionSlug } from '../lib/types';
+
+interface Props {
+  slug: ConditionSlug;
+  shortDescription: string;
+  featured?: boolean;
+}
+
+const { slug, shortDescription, featured = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+
+const baseClasses = 'block rounded-2xl p-5 transition-shadow shadow-sm hover:shadow-md no-underline hover:no-underline';
+const featuredClasses = featured ? 'bg-sage-600 text-cream-50' : 'bg-cream-100 text-navy-900 border border-cream-100';
+---
+
+<a href={`${base}/conditions/${slug}`} class={`${baseClasses} ${featuredClasses}`}>
+  <p class="font-serif text-lg">{CONDITION_LABELS[slug]}</p>
+  <p class={`mt-1 text-xs ${featured ? 'text-cream-50/80' : 'text-slate-500'}`}>{shortDescription}</p>
+</a>

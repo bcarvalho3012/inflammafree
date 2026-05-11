@@ -1,17 +1,94 @@
 ---
+import { getCollection } from 'astro:content';
 import Base from '../layouts/Base.astro';
-import { allFoods } from '../lib/foods.ts';
+import FoodCard from '../components/FoodCard.astro';
+import ConditionPill from '../components/ConditionPill.astro';
+import { allFoods } from '../lib/foods';
+import { sortFoods } from '../lib/filter';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const featured = sortFoods(allFoods, 'score').slice(0, 6);
+const conditions = (await getCollection('conditions')).sort((a, b) => a.data.order - b.data.order);
 ---
 
 <Base title="InflammaFree">
-  <section class="mx-auto max-w-3xl px-6 py-24">
-    <h1 class="text-5xl md:text-6xl font-serif leading-tight">Food as medicine for chronic inflammation.</h1>
-    <p class="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed">
-      A research-backed guide to foods that help reduce chronic inflammation —
-      with detailed coverage for migraines, arthritis, gut health, and other inflammatory conditions.
-    </p>
-    <p class="mt-12 text-sm text-slate-500">
-      Database currently has {allFoods.length} foods. Real homepage in Phase 6.
-    </p>
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-cream-50 via-cream-50 to-sage-400/10 -z-10"></div>
+    <div class="mx-auto max-w-4xl px-6 py-24 text-center">
+      <p class="text-sm uppercase tracking-wide text-sage-600">Anti-inflammatory food reference</p>
+      <h1 class="mt-3 text-5xl md:text-6xl font-serif leading-tight">Food as medicine for chronic inflammation.</h1>
+      <p class="mt-6 text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+        A research-backed guide covering migraines, arthritis, gut health, cardiovascular and other inflammatory conditions —
+        with detailed mechanisms and evidence-graded coverage of {allFoods.length}+ foods.
+      </p>
+      <form action={`${base}/foods`} method="get" class="mt-10 max-w-xl mx-auto flex gap-2">
+        <input
+          type="search"
+          name="q"
+          placeholder="Search foods, compounds, conditions..."
+          class="flex-1 rounded-full border border-cream-100 bg-cream-50 px-5 py-3 text-base focus:outline-none focus:ring-2 focus:ring-sage-400"
+        />
+        <button type="submit" class="rounded-full bg-sage-600 px-6 py-3 text-cream-50 hover:bg-sage-800 hover:no-underline">
+          Search
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Stat strip -->
+  <section class="mx-auto max-w-4xl px-6 -mt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+      <div class="rounded-xl bg-cream-100 p-5 text-center">
+        <p class="font-serif text-3xl text-sage-600">{allFoods.length}+</p>
+        <p class="mt-1 text-sm text-slate-500">Anti-inflammatory foods</p>
+      </div>
+      <div class="rounded-xl bg-cream-100 p-5 text-center">
+        <p class="font-serif text-3xl text-sage-600">{conditions.length}</p>
+        <p class="mt-1 text-sm text-slate-500">Conditions covered</p>
+      </div>
+      <div class="rounded-xl bg-cream-100 p-5 text-center">
+        <p class="font-serif text-3xl text-sage-600">Research</p>
+        <p class="mt-1 text-sm text-slate-500">Backed citations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Condition navigator -->
+  <section class="mx-auto max-w-6xl px-6 py-16">
+    <h2 class="text-3xl font-serif">Pick a condition</h2>
+    <p class="mt-2 text-slate-500">Each page covers the inflammatory pathways involved, top foods, and what to avoid.</p>
+    <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {conditions.map((c) => (
+        <ConditionPill slug={c.data.slug} shortDescription={c.data.shortDescription} featured={c.data.featured} />
+      ))}
+    </div>
+  </section>
+
+  <!-- Featured foods -->
+  <section class="mx-auto max-w-6xl px-6 pb-16">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-3xl font-serif">Highest-scoring foods</h2>
+      <a href={`${base}/foods`} class="text-sm text-sage-800 hover:underline">Browse the full database →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featured.map((food) => <FoodCard food={food} />)}
+    </div>
+  </section>
+
+  <!-- Cross-links -->
+  <section class="mx-auto max-w-6xl px-6 pb-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <a href={`${base}/meal-plan`} class="block rounded-xl bg-cream-100 p-6 hover:shadow-md transition-shadow no-underline hover:no-underline">
+        <p class="text-sm uppercase tracking-wide text-sage-600">Practical</p>
+        <p class="mt-1 font-serif text-2xl text-navy-900">See an example day →</p>
+        <p class="mt-1 text-sm text-slate-500">A realistic anti-inflammatory day, meal by meal.</p>
+      </a>
+      <a href={`${base}/science`} class="block rounded-xl bg-cream-100 p-6 hover:shadow-md transition-shadow no-underline hover:no-underline">
+        <p class="text-sm uppercase tracking-wide text-sage-600">Background</p>
+        <p class="mt-1 font-serif text-2xl text-navy-900">How inflammation works →</p>
+        <p class="mt-1 text-sm text-slate-500">CRP, IL-6, TNF-α explained — and how food acts on them.</p>
+      </a>
+    </div>
   </section>
 </Base>
